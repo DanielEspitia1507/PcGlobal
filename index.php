@@ -21,7 +21,6 @@
     <link rel="website icon" href="logo-img/logo-panther.png">
     <script src="//code.tidio.co/wmbt5ah4q76gqccxywn7jtddh8auveiy.js" async></script>
     <title>PcGlobal</title>
-
 </head>
 <body>
     <div class="home-wrapper" >
@@ -207,18 +206,16 @@
     </div>
 
     
-    </section>
-    
     <section id="contacto">
         <div class="my-5">
         <h2 class="fw-bold my-4">COMENTARIOS</h2>
             <p class="text-center">¿Quieres dejarnos un comentario? <br> Ya sea, una petición, queja,   sugerencia, reclamo, o incluso unas felicitaciones. Háznoslo saber.</p>
-            <form class="formulario" id="formulario">
+            <form method="POST" class="formulario">
                 <!-- Grupo: Nombre Completo -->
                 <div class="formulario__grupo" id="grupo__nombre">
                     <label for="nombre" class="formulario__label">Nombre</label>
                     <div class="formulario__grupo-input">
-                        <input type="text" class="formulario__input" name="name" id="nombre"  placeholder="Nombre">
+                        <input type="text" class="formulario__input" name="name" id="nombre"  placeholder="Nombre" required>
                         <i class="formulario__validacion-estado bi bi-x-circle-fill"></i>
                     </div>
                     <p class="formulario__input-error">El nombre solo puede contener letras, minúsuculas,   mayúsculas y acentos.</p>
@@ -228,7 +225,7 @@
                 <div class="formulario__grupo" id="grupo__correo">
                     <label for="correo" class="formulario__label">Correo Electrónico</label>
                     <div class="formulario__grupo-input">
-                        <input type="email" class="formulario__input" name="email" id="correo"     placeholder="correo@correo.com">
+                        <input type="email" class="formulario__input" name="email" id="correo"     placeholder="correo@correo.com" required>
                         <i class="formulario__validacion-estado bi bi-x-circle-fill"></i>
                     </div>
                     <p class="formulario__input-error">El correo solo puede contener letras, números, puntos,guiones y guión bajo.</p>
@@ -238,7 +235,7 @@
                 <div class="formulario__grupo" id="grupo__motivo">
                     <label for="motivo" class="formulario__label">Mensaje</label>
                     <div class="formulario__grupo-textarea">
-                        <textarea class="formulario__textarea" name="mensaje" id="motivo"></textarea>
+                        <textarea class="formulario__textarea" name="mensaje" id="motivo" required></textarea>
                         <i class="formulario__validacion-estado bi bi-x-circle-fill"></i>
                     </div>
                     <p class="formulario__input-error">El mensaje debe tener un contenido mínimo de 20 palabras.    </p>
@@ -246,10 +243,7 @@
 
                 <!-- Grupo: Términos y Condiciones -->
                 <div class="formulario__grupo-terminos" id="grupo__terminos">
-                    <label class="formulario__label">
-                        <input class="formulario__checkbox" type="checkbox" name="terminos" id="terminos">
-                        Acepto los Términos y Condiciones.
-                    </label>
+                <input class="rounded" type="checkbox" name="aceptar" required> Acepto los <a class="text-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">términos y condiciones.</a>
                 </div>
 
                 <div class="formulario__mensaje" id="formulario__mensaje">
@@ -264,8 +258,69 @@
                 </div>
             </form>
         </div>
+        <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable ">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-4  fw-bold" id="exampleModalLabel">Terminos y condiciones</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p>
+        <h1 class="fs-6 fw-bold">Propietario de la página web, la oferta y el enlace de los Términos.</h1>
 
-
+        Esta página web es propiedad y está operado por . Estos Términos establecen los términos y condiciones bajo los cuales tu puedes usar nuestra página web y servicios ofrecidos por nosotros. Esta página web ofrece a los visitantes compra de computadores y componentes entre ell (tarjetas ram,tarjetas madre,procesadores etc). Al acceder o usar la página web de nuestro servicio, usted aprueba que haya leído, entendido y aceptado estar sujeto a estos Términos
+        
+        <h1 class="fs-6 fw-bold">Cuáles son los requisitos para crear una cuenta.</h1>
+        
+        Para usar nuestro página web y / o recibir nuestros servicios, debe ser mayor de edad y poseer la autoridad legal, el derecho y la libertad para participar en estos Términos como un acuerdo vinculante. No tienes permitido utilizar esta página web y / o recibir servicios si hacerlo está prohibido en tu país o en virtud de cualquier ley o regulación aplicable a tu caso.
+        
+        <h1 class="fs-6 fw-bold">Términos comerciales ofrecidos a los clientes.</h1>
+        
+        Al comprar un artículo, aceptas que: (i) eres responsable de leer el listado completo del artículo antes de comprometerte a comprarlo: (ii) celebras un contrato legalmente vinculante para comprar un artículo cuando te comprometed a comprar un artículo y completar el proceso de check-out.
+        
+         Los precios que cobramos por usar nuestros servicios / para nuestros productos se enumeran en la página web. Nos reservamos el derecho de cambiar nuestros precios para los productos que se muestran en cualquier momento y de corregir los errores de precios que pueden ocurrir inadvertidamente. Información adicional sobre precios e impuestos sobre las ventas está disponible en la página de pagos. 
+        
+        "La tarifa por los servicios y cualquier otro cargo que pueda incurrir en relación con tu uso del servicio, como los impuestos y las posibles tarifas de transacción, se cobrarán mensualmente a tu método de pago.
+        
+        <h1 class="fs-6 fw-bold">politica de reembolso.</h1>
+        
+        Solo reemplazamos los artículos si están defectuosos o dañados. Si necesitas cambiarlo por el mismo artículo, envíanos un email a (Agrega dirección de correo electrónico relevante) y envía tu artículo a: (Dirección relevante).
+        
+        <h1 class="fs-6 fw-bold">Posesión de propiedad intelectual, derechos de autor y logos.</h1>
+        
+        El Servicio y todos los materiales incluidos o transferidos, incluyendo, sin limitación, software, imágenes, texto, gráficos, logotipos, patentes, marcas registradas, marcas de servicio, derechos de autor, fotografías, audio, videos, música y todos los Derechos de Propiedad Intelectual relacionados con ellos, son la propiedad exclusiva de [Nombre del propietario dela página web]. Salvo que se indique explícitamente en este documento, no se considerará que nada en estos Términos crea una licencia en o bajo ninguno de dichos Derechos de Propiedad Intelectual, y tu aceptas no vender, licenciar, alquilar, modificar, distribuir, copiar, reproducir, transmitir, exhibir públicamente, realizar públicamente, publicar, adaptar, editar o crear trabajos derivados de los mismos. 
+        
+        <h1 class="fs-6 fw-bold">Limitación de responsabilidad.</h1>
+        
+        En la máxima medida permitida por la ley aplicable, en ningún caso el [propietario de la página web] será responsable por daños indirectos, punitivos, incidentales, especiales, consecuentes o ejemplares, incluidos, entre otros, daños por pérdida de beneficios, buena voluntad, uso, datos. u otras pérdidas intangibles, que surjan de o estén relacionadas con el uso o la imposibilidad de utilizar el servicio. 
+        
+        En la máxima medida permitida por la ley aplicable, [el propietario la página web] no asume responsabilidad alguna por (i) errores, errores o inexactitudes de contenido; (ii) lesiones personales o daños a la propiedad, de cualquier naturaleza que sean, como resultado de tu acceso o uso de nuestro servicio; y (iii) cualquier acceso no autorizado o uso de nuestros servidores seguros y / o toda la información personal almacenada en los mismos.
+        Derecho a cambiar y modificar los Términos.
+        
+        <h1 class="fs-6 fw-bold">Emails de promociones y contenido.</h1>
+        
+        Acepta recibir de vez en cuando nuestros mensajes y materiales de promoción, por correo postal, correo electrónico o cualquier otro formulario de contacto que nos proporciones (incluido tu número de teléfono para llamadas o mensajes de texto). Si no deseas recibir dichos materiales o avisos de promociones, simplemente avísanos en cualquier momento.
+        
+        <h1 class="fs-6 fw-bold">Preferencia de ley y resolución de disputas.</h1>
+        
+        Estos Términos, los derechos y recursos provistos aquí, y todos y cada uno de los reclamos y disputas relacionados con este y / o los servicios, se regirán, interpretarán y aplicarán en todos los aspectos única y exclusivamente de conformidad con las leyes sustantivas internas de [ Nombre del país / estado], sin respeto a sus principios de conflicto de leyes. Todos los reclamos y disputas se presentarán y usted acepta que sean decididos exclusivamente por un tribunal de jurisdicción competente ubicada en [Nombre de la ciudad de los tribunales]. La aplicación de la Convención de Contratos de las Naciones Unidas para la Venta Internacional de Bienes queda expresamente excluida.
+        
+        <h1 class="fs-6 fw-bold">Atención al cliente e información de contacto.</h1>
+        
+        Se espera que los términos tengan información de contacto que permita a los usuarios y clientes recibir servicios de atención al cliente y corresponder con las páginas web y sus operadores.
+        
+        <h1 class="fs-6 fw-bold">Disposiciones recomendadas para sitios web con comunidades de usuarios.</h1>
+        
+        Si tu página web incluye una comunidad de usuarios, recomendamos que los Términos de la página aclaren que todos los usuarios que se unen a una comunidad tienen un perfil público visible para los visitantes de la página y que su actividad pública (como sus publicaciones o comentarios) será visible a otros visitantes del sitio web.
+      </p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
     </section>
     <iframe class="mt-4" src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1988.2989721749705!2d-74.05879632918939!3d4.665551278628364!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sunilago!5e0!3m2!1ses!2sco!4v1677883140666!5m2!1ses!2sco" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     <footer style="background-color:whitesmoke;">

@@ -36,9 +36,9 @@
     <div class="flex mx-auto my-5 justify-center items-center">
             <form action="php/validar.php" class="flex flex-col mx-6 w-full sm:w-1/3" method="POST">
                <label class="font-medium">Usuario</label>
-               <input class="border-2 rounded-md p-2" type="text" name="name">
+               <input class="border-2 rounded-md p-2" pattern="[A-Za-z0-9_-]{1,15}" required type="text" name="name">
                <label class="font-medium">Contraseña</label>
-               <input class="border-2 rounded-md p-2" type="password" name="password">
+               <input class="border-2 rounded-md p-2" pattern="[A-Za-z0-9_-]{1,15}" required type="password" name="password">
                <input class="submit mt-3 p-2 font-medium" type="submit" name="submit" value="Iniciar Sesión">
             </form>
     </div>

@@ -198,6 +198,22 @@ section h2{
     cursor: pointer;
     transition: .1s ease all;
 }
+.formulario a.text-primary{
+    text-decoration: none;
+}
+.modal-footer button.btn-outline{
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgb(116, 75, 204);
+    border: 2px solid rgb(116, 75, 204);
+    background-color: transparent;
+}
+.modal-footer button.btn-outline:hover{
+    color: #FFFF;
+    border: 2px solid rgb(116, 75, 204);
+    background-color: rgb(116, 75, 204);
+}
 .formulario__btn:hover{
     box-shadow: 3px 0px 30px rgba(163, 163, 163, 1);
 }
