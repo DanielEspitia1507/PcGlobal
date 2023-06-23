@@ -28,10 +28,10 @@
             <div>                
                 <nav class="container-fluid navbar navbar-expand-sm justify-content-between">
                     <ul class="navbar-nav">
-                        <a href="../../../#home" class="fw-bold princ">INICIO</a>
-                        <a href="../../../#servicios" class="fw-bold princ">SERVICIOS</a>
-                        <a href="../../../#portafolio" class="fw-bold princ">TIENDA</a>
-                        <a href="../../../#contacto" class= "fw-bold princ">COMENTARIOS</a>
+                        <a href="#home" class="fw-bold princ">INICIO</a>
+                        <a href="#servicios" class="fw-bold princ">SERVICIOS</a>
+                        <a href="#portafolio" class="fw-bold princ">TIENDA</a>
+                        <a href="#contacto" class= "fw-bold princ">COMENTARIOS</a>
                     </ul>
                 <div class="dropdown justify-content-between">
                     <button class="border-0 bg-transparent"><a href="../../../#home"><i class="bi bi-house fs-4 text-white ms-auto"></i></a></button>
@@ -210,49 +210,52 @@
         <div class="my-5">
         <h2 class="fw-bold my-4">COMENTARIOS</h2>
             <p class="text-center">¿Quieres dejarnos un comentario? <br> Ya sea, una petición, queja,   sugerencia, reclamo, o incluso unas felicitaciones. Háznoslo saber.</p>
-            <form method="POST" class="formulario">
+            <form action="https://formsubmit.co/pgloc77@gmail.com" method="POST" class="formulario">
                 <!-- Grupo: Nombre Completo -->
-                <div class="formulario__grupo" id="grupo__nombre">
+                <div class="formulario__grupo">
+                    <input type="hidden" name="_captcha" value="false">
+                    <input type="hidden" name="_next" value="http://localhost:3000/index.php">
+                    <input type="hidden" name="_subject" value="¡Nuevo Mensaje!">
                     <label for="nombre" class="formulario__label">Nombre</label>
                     <div class="formulario__grupo-input">
-                        <input type="text" class="formulario__input" name="name" id="nombre"  placeholder="Nombre" required>
+                        <input type="text" class="formulario__input" name="name"  placeholder="Nombre" required>
                         <i class="formulario__validacion-estado bi bi-x-circle-fill"></i>
                     </div>
                     <p class="formulario__input-error">El nombre solo puede contener letras, minúsuculas,   mayúsculas y acentos.</p>
                 </div>
 
                 <!-- Grupo: Correo -->
-                <div class="formulario__grupo" id="grupo__correo">
+                <div class="formulario__grupo">
                     <label for="correo" class="formulario__label">Correo Electrónico</label>
                     <div class="formulario__grupo-input">
-                        <input type="email" class="formulario__input" name="email" id="correo"     placeholder="correo@correo.com" required>
+                        <input type="email" class="formulario__input" name="email"     placeholder="correo@correo.com" required>
                         <i class="formulario__validacion-estado bi bi-x-circle-fill"></i>
                     </div>
                     <p class="formulario__input-error">El correo solo puede contener letras, números, puntos,guiones y guión bajo.</p>
                 </div>
 
                 <!-- Grupo: Motivo -->
-                <div class="formulario__grupo" id="grupo__motivo">
+                <div class="formulario__grupo">
                     <label for="motivo" class="formulario__label">Mensaje</label>
                     <div class="formulario__grupo-textarea">
-                        <textarea class="formulario__textarea" name="mensaje" id="motivo" required></textarea>
+                        <textarea class="formulario__textarea" name="mensaje" required></textarea>
                         <i class="formulario__validacion-estado bi bi-x-circle-fill"></i>
                     </div>
                     <p class="formulario__input-error">El mensaje debe tener un contenido mínimo de 20 palabras.    </p>
                 </div>
 
                 <!-- Grupo: Términos y Condiciones -->
-                <div class="formulario__grupo-terminos" id="grupo__terminos">
+                <div class="formulario__grupo-terminos">
                 <input class="rounded" type="checkbox" name="aceptar" required> Acepto los <a class="text-primary" type="button" data-bs-toggle="modal" data-bs-target="#exampleModal">términos y condiciones.</a>
                 </div>
 
-                <div class="formulario__mensaje" id="formulario__mensaje">
+                <div class="formulario__mensaje">
                     <p><i class="bi bi-exclamation-triangle-fill"></i> <b>Error:</b> Por favor rellene el formulario correctamente.</p>
                 </div>
 
                 <div class="formulario__grupo formulario__grupo-btn-enviar">
                     <button type="submit" class="formulario__btn">Enviar</button>
-                    <p class="formulario__mensaje-exito" id="formulario__mensaje-exito">
+                    <p class="formulario__mensaje-exito">
                         ¡Formulario obtenido exitosamente!
                     </p>
                 </div>

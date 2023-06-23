@@ -15,8 +15,8 @@
         <nav class="flex h-20 text-white items-center">
             <div class="ms-9 flex gap-3">
                 <a href="../index.php" class="hover:text-stone-300 font-bold text-lg">Inicio</a>
-                <a href="index.php" class="hover:text-stone-300 font-bold text-lg">Empleados</a>
-                <a href="../CRUD_articulos/index.php" class="hover:text-stone-300 font-bold text-lg">Artículos</a>
+                <a href="../CRUD_empleados/index.php" class="hover:text-stone-300 font-bold text-lg">Empleados</a>
+                <a href="index.php" class="hover:text-stone-300 font-bold text-lg">Artículos</a>
             </div>
             <div class="flex justify-end w-full gap-2 me-8">
                 <i class="bi bi-person"></i>

@@ -1,4 +1,4 @@
-<?php include("../db.php")?>
+<?php include("db.php")?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,17 +10,18 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="website icon" href="../../logo-img/logo-panther.png">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>CRUD</title>
         <nav class="flex h-20 text-white items-center">
             <div class="ms-9 flex gap-3">
-                <a href="../index.php" class="hover:text-stone-300 font-bold text-lg">Inicio</a>
-                <a href="index.php" class="hover:text-stone-300 font-bold text-lg">Empleados</a>
+                <a href="index.php" class="hover:text-stone-300 font-bold text-lg">Inicio</a>
+                <a href="CRUD_empleados/index.php" class="hover:text-stone-300 font-bold text-lg">Empleados</a>
+                <a href="CRUD_articulos/index.php" class="hover:text-stone-300 font-bold text-lg">Artículos</a>
             </div>
             <div class="flex justify-end w-full gap-2 me-8">
                 <i class="bi bi-person"></i>
                 <p class="font-medium me-2"><?php echo $_SESSION['username']?></p>
-                <a href="../php/cerrar_sesion.php" class="hover:text-stone-300"><i class="hover:text-stone-300 bi bi-door-open"></i></a>
+                <a href="php/cerrar_sesion.php" class="hover:text-stone-300"><i class="hover:text-stone-300 bi bi-door-open"></i></a>
             </div>
         </nav>
 </head>

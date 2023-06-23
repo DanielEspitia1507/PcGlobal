@@ -38,7 +38,7 @@
                <label class="font-medium">Usuario</label>
                <input class="border-2 rounded-md p-2" pattern="[A-Za-z0-9_-]{1,15}" required type="text" name="name">
                <label class="font-medium">Contraseña</label>
-               <input class="border-2 rounded-md p-2" pattern="[A-Za-z0-9_-]{1,15}" required type="password" name="password">
+               <input class="border-2 rounded-md p-2" required type="password" name="password">
                <input class="submit mt-3 p-2 font-medium" type="submit" name="submit" value="Iniciar Sesión">
             </form>
     </div>

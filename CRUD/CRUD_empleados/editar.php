@@ -1,4 +1,4 @@
-<?php include("../includes/header.php")?>
+<?php include("../includes/header2.php")?>
 <?php
 
 if(empty($_SESSION['username'])){
@@ -81,7 +81,7 @@ if(isset($_GET['id'])){
                             <label class="form-label fw-bold">Actualizar Teléfono</label>
                             <input required class="form-control" placeholder="Actualizar Teléfono" type="text" name="tel" value="<?php echo $telefono; ?>">
                         </div>
-                        <button class="btn btn-success" name="update">Update</button>
+                        <button class="btn btn-success" name="update">Actualizar</button>
                     </form>
                 </div>
             </div>

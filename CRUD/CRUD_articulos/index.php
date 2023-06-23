@@ -1,4 +1,4 @@
-<?php include("../includes/header2.php"); 
+<?php include("../includes/header3.php"); 
     if(empty($_SESSION['username'])){
         header("location: ../login.php");
         die();
@@ -15,34 +15,31 @@
             <?php unset($_SESSION['message']); } ?>        
     </div>
 <div class="container flex mx-auto my-6">
-    <table class="table">
+    <table class="table text-center">
         <thead>
             <tr class="border-t-2 border-gray-900">
-                <th>Nombres</th>
-                <th>Apellidos</th>
-                <th>Rol</th>
-                <th>Tipo de Documento</th>
-                <th>N° de Documento</th>
-                <th>Correo</th>
-                <th>Teléfono</th>
-                <th>Acciones</th>
+                <th>Nombre del Artículo</th>
+                <th>Precio</th>
+                <th>Imágen</th>
+                <th>Categoría</th>
+                <th>Marca</th>
+                <th>Cantidad</th>
             </tr>
         </thead>
         <tbody>
             <?php
-                $query = "CALL PA_consulta_empleados();";
+                $query = "CALL PA_consulta_articulos();";
                 $result = mysqli_query($conn, $query);
                 
 
                 while($row = mysqli_fetch_array($result)){ ?>
                     <tr>
-                        <td><?php echo $row['Nombres'] ?></td>
-                        <td><?php echo $row['Apellidos'] ?></td>
-                        <td><?php echo $row['Rol'] ?></td>
-                        <td><?php echo $row['Tipo de Documento'] ?></td>
-                        <td><?php echo $row['N° de Documento'] ?></td>
-                        <td><?php echo $row['Correo'] ?></td>
-                        <td><?php echo $row['Telefono'] ?></td>
+                        <td><?php echo $row['Nombre'] ?></td>
+                        <td>$<?php echo $row['Precio']?> COP</td>
+                        <td><img src="<?php echo $row['Imágen'] ?>" width="100px"></td>
+                        <td><?php echo $row['Categoría']?></td>
+                        <td><?php echo $row['Marca'] ?></td>
+                        <td><?php echo $row['Cantidad'] ?> unidades</td>
                         <td>
                             <a class="btn btn-outline-primary" href="editar.php?id=<?php echo $row['id']?>"><i class="fas fa-marker"></i></a>
                             <a class="btn btn-outline-danger" href="eliminar.php?id=<?php echo $row['id']?>"><i class="far fa-trash-alt"></i></a>
