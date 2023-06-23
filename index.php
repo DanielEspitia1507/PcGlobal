@@ -17,33 +17,31 @@
     <link rel="stylesheet" href="css/style-3-2-1-1.css">
     <link rel="stylesheet" href="css/normalize.css">
     <script src="js/app.js"></script>
-    <script src="//code.tidio.co/anucvq6wj7i4y0rb51rykuwdkco1lbde.js" async></script>
     <script src="js/formulario.js"></script>
-
     <link rel="website icon" href="logo-img/logo-panther.png">
     <title>PcGlobal</title>
 
 </head>
 <body>
     <div class="home-wrapper" >
-    <header>
+        <header>
             <div>                
                 <nav class="container-fluid navbar navbar-expand-sm justify-content-between">
                     <ul class="navbar-nav">
-                        <a href="#home" class="fw-bold">HOME</a>
-                        <a href="#servicios" class="fw-bold">SERVICIOS</a>
-                        <a href="#portafolio" class="fw-bold">TIENDA</a>
-                        <a href="#contacto" class= "fw-bold">COMENTARIOS</a>
+                        <a href="../../../#home" class="fw-bold">HOME</a>
+                        <a href="../../../#servicios" class="fw-bold">SERVICIOS</a>
+                        <a href="../../../#portafolio" class="fw-bold">TIENDA</a>
+                        <a href="../../../#contacto" class= "fw-bold">COMENTARIOS</a>
                     </ul>
                 <div class="dropdown justify-content-between">
-                    <button class="border-0 bg-transparent"><a href="#home"><i class="bi bi-house fs-4 text-white ms-auto"></i></a></button>
+                    <button class="border-0 bg-transparent"><a href="../../../#home"><i class="bi bi-house fs-4 text-white ms-auto"></i></a></button>
                     <button class="border-0 bg-transparent" data-bs-toggle="dropdown"><i class="bi bi-list fs-2 text-white"></i></button>
                     <ol class="dropdown-menu">
                         <li class="dropdown-header">Menú</li>
                         <li class="dropdown-divider"></li>
-                        <li class="dropdown-item"><a class="dropdown-item" href="#servicios" class="fw-bold">SERVICIOS</a></li>
-                        <li class="dropdown-item"><a class="dropdown-item" href="#portafolio" class="fw-bold">TIENDA</a></li>
-                        <li class="dropdown-item"><a class="dropdown-item" href="#contacto" class="fw-bold">COMENTARIOS</a>
+                        <li class="dropdown-item"><a class="dropdown-item" href="../../../#servicios" class="fw-bold">SERVICIOS</a></li>
+                        <li class="dropdown-item"><a class="dropdown-item" href="../../../#portafolio" class="fw-bold">TIENDA</a></li>
+                        <li class="dropdown-item"><a class="dropdown-item" href="../../../#contacto" class="fw-bold">COMENTARIOS</a></li>
                     </ol>
                 </div>
                     <div class="social me-3">
@@ -61,9 +59,9 @@
                         </div>
                     </div>
                 </nav>
-
             </div> 
         </header>
+    </div>
         <section id="home">
             <div id="intro" class="carousel slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
@@ -115,10 +113,10 @@
                 </button>
             </div> 
         </section>
-</div> 
+    </div> 
 
     <section id="servicios">
-        <div class="container my-3">
+        <div class="container mb-3">
             <h2 class="fw-bold">SERVICIOS</h2>
             <div class="row align-items-center g-0">
             
@@ -162,7 +160,7 @@
                 <div class="col box">
                     <a href="componentes/Tarjetas Graficas.php"><img src="images/Portafolio/Tarjeta Gráfica.jpg" alt="Iconos Redondos" height="240px" width="360px"></a>
                     <h3>
-                        <a class="fs-4 my-5" href="componentes/Tarjetas Graficas.php" class="mt-4">Tarjetas Graficas</a>
+                        <a class="fs-4 my-5" href="componentes/Tarjetas Graficas.php" class="mt-4">Tarjetas Gráficas</a>
                     </h3>
                 </div>
 
@@ -184,13 +182,13 @@
                 </div>
 
                 <div class="col box">
-                    <a href="componentes/Monitores.php"><img src="images/PortafoliO/Monitores.jpg" alt="Iconos Redondos"  height="240pxpx" width="360px"></a>
+                    <a href="componentes/Monitores.php"><img src="images/Portafolio/Monitores.jpg" alt="Iconos Redondos"  height="240pxpx" width="360px"></a>
                     <h3><a class="fs-4" href="componentes/Monitores.php">Monitores</a></h3>          
                 </div>
 
                 <div class="col box">
                     <a href="componentes/Tarjeta Madre.php"><img src="images/Portafolio/mother-board.jpg" alt="Iconos Redondos" height="240pxpx" width="360px"></a>
-                    <h3><a class="fs-4" href="componentes/Tarjeta Madre.php">Tarjeta Madre</a></h3>          
+                    <h3><a class="fs-4" href="componentes/Tarjeta Madre.php">Tarjetas Madre</a></h3>          
                 </div>
                 <div class="col box">
                     <a href="componentes/Cases.php"><img src="images/Portafolio/cases.jpg" alt="Iconos Redondos" height="240px" width="360px"></a>
@@ -198,7 +196,7 @@
                 </div>
                 <div class="col box">
                     <a href="componentes/Perifericos.php"><img src="images/Portafolio/Perifericos.jpg" alt="Iconos Redondos" height="240px" width="360px"></a>
-                    <h3><a class="fs-4" href="componentes/Perifericos.php">Perifericos</a></h3>          
+                    <h3><a class="fs-4" href="componentes/Perifericos.php">Periféricos</a></h3>          
                 </div>
                 <div class="col box">
                     <a href="componentes/Fuentes de poder.php"><img src="images/Portafolio/Fuente de poder.jpg" alt="Iconos Redondos" height="240pxpx"   width="360px"></a>
@@ -219,7 +217,7 @@
                 <div class="formulario__grupo" id="grupo__nombre">
                     <label for="nombre" class="formulario__label">Nombre</label>
                     <div class="formulario__grupo-input">
-                        <input type="text" class="formulario__input" name="nombre" id="nombre"  placeholder="Nombre">
+                        <input type="text" class="formulario__input" name="name" id="nombre"  placeholder="Nombre">
                         <i class="formulario__validacion-estado bi bi-x-circle-fill"></i>
                     </div>
                     <p class="formulario__input-error">El nombre solo puede contener letras, minúsuculas,   mayúsculas y acentos.</p>
@@ -229,7 +227,7 @@
                 <div class="formulario__grupo" id="grupo__correo">
                     <label for="correo" class="formulario__label">Correo Electrónico</label>
                     <div class="formulario__grupo-input">
-                        <input type="email" class="formulario__input" name="correo" id="correo"     placeholder="correo@correo.com">
+                        <input type="email" class="formulario__input" name="email" id="correo"     placeholder="correo@correo.com">
                         <i class="formulario__validacion-estado bi bi-x-circle-fill"></i>
                     </div>
                     <p class="formulario__input-error">El correo solo puede contener letras, números, puntos,guiones y guión bajo.</p>
@@ -239,7 +237,7 @@
                 <div class="formulario__grupo" id="grupo__motivo">
                     <label for="motivo" class="formulario__label">Mensaje</label>
                     <div class="formulario__grupo-textarea">
-                        <textarea class="formulario__textarea" name="motivo" id="motivo"></textarea>
+                        <textarea class="formulario__textarea" name="mensaje" id="motivo"></textarea>
                         <i class="formulario__validacion-estado bi bi-x-circle-fill"></i>
                     </div>
                     <p class="formulario__input-error">El mensaje debe tener un contenido mínimo de 20 palabras.    </p>

@@ -2,11 +2,8 @@
     box-sizing: border-box;
     font-family: 'Archivo', sans-serif !important; 
 }
-::-webkit-scrollbar{
-    display: none;
-}
 header{
-    position: fixed;
+    position: static;
     z-index: 3;
     padding: 10px 0;
     width: 100%;
@@ -15,7 +12,6 @@ header{
     height: 90px;
 }   
 header nav{
-    float: left;
     margin-top: 10px;
 }     
 header nav a{
@@ -91,6 +87,7 @@ section h2{
     border-radius: 10px;
 }
 .carousel{
+    margin-top: -79.6px;
     margin-right: 70px;
     margin-left: 70px;
 }
