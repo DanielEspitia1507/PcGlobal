@@ -2,19 +2,21 @@ html,
 body{
     height: 100%;
 }
-
 body{
     margin: 0;
     overflow: auto;
-    background-color: #f8f9fd;
 }
-
 .height{
-    height: 650px;
+    height: 540px;
 }
-
 @media only screen and (min-width: 1768px){
     .height{
         height: 970px;
     } 
+}
+.flex a{
+    background: rgb(116, 75, 204);
+}
+.flex a:hover{
+    background-color: rgb(83, 48, 158);
 }

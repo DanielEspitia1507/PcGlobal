@@ -16,11 +16,12 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../../../css/style-3-2-1-1.css">
     <link rel="stylesheet" href="../../../css/normalize.css">
+    <link rel="stylesheet" href="src/input.css">
     <script src="js/app.js"></script>
     <script src="//code.tidio.co/anucvq6wj7i4y0rb51rykuwdkco1lbde.js" async></script>
     <script src="js/formulario.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="website icon" href="../../../logo-img/logo-panther.png">
+    <link rel="website icon" href="../logo-img/logo-panther.png">
     <title>PcGlobal</title>
 
 </head>
@@ -30,10 +31,10 @@
             <div>                
                 <nav class="container-fluid navbar navbar-expand-sm justify-content-between">
                     <ul class="navbar-nav">
-                        <a href="../../../#home" class="fw-bold">HOME</a>
-                        <a href="../../../#servicios" class="fw-bold">SERVICIOS</a>
-                        <a href="../../../#portafolio" class="fw-bold">TIENDA</a>
-                        <a href="../../../#contacto" class= "fw-bold">COMENTARIOS</a>
+                        <a href="../../../#home" class="fw-bold princ">INICIO</a>
+                        <a href="../../../#servicios" class="fw-bold princ">SERVICIOS</a>
+                        <a href="../../../#portafolio" class="fw-bold princ">TIENDA</a>
+                        <a href="../../../#contacto" class= "fw-bold princ">COMENTARIOS</a>
                     </ul>
                 <div class="dropdown justify-content-between">
                     <button class="border-0 bg-transparent"><a href="../../../#home"><i class="bi bi-house fs-4 text-white ms-auto"></i></a></button>
@@ -65,31 +66,31 @@
         </header>
     </div>
     <div class="min-height-full flex">
-        <div class="hidden lg:block relative h-full flex-1">
-            <img src="src/img/brand.jpeg" class="height" alt="">
-        </div>
         <div class="flex flex-1 flex-col justify-center py-12 px-4 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
             <div class="mx-auto w-full max-w-sm lg:max-w-lg lg:w-[100rem]">
                 <div class="text-center lg:text-left">
                     <img src="src/img/logoa-nobg.png" class="h-30 w-auto m-auto lg:m-0" alt="">
-                    <h2 class="mt-32 sm:mt-6 text-2xl sm:text-3xl font-extrabold text-gray-900">¡Oops! Sentimos esto. :(</i></h2>
+                    <h2 class="mt-32 sm:mt-6 text-2xl sm:text-3xl font-extrabold text-gray-900"><b class="p-1">¡OOPS!</b> 404 ERROR</i></h2>
                 </div>
                 <div class="mt-6">
                     <form action="" class="space-y-1">
                         <div class="grid grid-cols-1 lg:grid-cols-2 lg:gap-3">
                             <div class="col-span-2 text-md sm:text-lg">
-                                La página está en proceso de construcción, pero muy pronto estará lista.
+                            Lo sentimos, la página no fue encontrada. El link al que entraste probablemente esté roto o la página fue removida
                             </div>
                             <div class="text-center col-span-2 font-bold text-md mt-6">
-                                <p>¡Vuelve Pronto! </p>
+                                <p>¡Vuelve Pronto!</p>
                             </div>
                         </div>
                         <div class="flex">
-                            <a href="../index.php" class="text-center mt-8 w-full py-3 bg-indigo-600 text-white font-medium hover:bg-indigo-700 hover:shadow-md hover:text-slate-100"><i class="bi bi-arrow-left"></i> Volver al Inicio</a>
+                            <a href="../index.php" class="text-center mt-8 w-full py-3 text-white font-medium hover:shadow-md hover:text-slate-100"><i class="bi bi-arrow-left"></i> Volver al Inicio</a>
                         </div>
                     </form>
                 </div>
             </div>
+        </div>
+        <div class="hidden lg:block relative flex-1">
+            <img src="src/img/brand.png" class="height" alt="">
         </div>
     </div>
 </body>

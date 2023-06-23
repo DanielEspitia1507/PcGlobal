@@ -19,6 +19,7 @@
     <script src="js/app.js"></script>
     <script src="js/formulario.js"></script>
     <link rel="website icon" href="logo-img/logo-panther.png">
+    <script src="//code.tidio.co/wmbt5ah4q76gqccxywn7jtddh8auveiy.js" async></script>
     <title>PcGlobal</title>
 
 </head>
@@ -28,10 +29,10 @@
             <div>                
                 <nav class="container-fluid navbar navbar-expand-sm justify-content-between">
                     <ul class="navbar-nav">
-                        <a href="../../../#home" class="fw-bold">HOME</a>
-                        <a href="../../../#servicios" class="fw-bold">SERVICIOS</a>
-                        <a href="../../../#portafolio" class="fw-bold">TIENDA</a>
-                        <a href="../../../#contacto" class= "fw-bold">COMENTARIOS</a>
+                        <a href="../../../#home" class="fw-bold princ">INICIO</a>
+                        <a href="../../../#servicios" class="fw-bold princ">SERVICIOS</a>
+                        <a href="../../../#portafolio" class="fw-bold princ">TIENDA</a>
+                        <a href="../../../#contacto" class= "fw-bold princ">COMENTARIOS</a>
                     </ul>
                 <div class="dropdown justify-content-between">
                     <button class="border-0 bg-transparent"><a href="../../../#home"><i class="bi bi-house fs-4 text-white ms-auto"></i></a></button>
@@ -46,7 +47,7 @@
                 </div>
                     <div class="social me-3">
                         <a class="mx-auto" target="_blank" href="https://www.facebook.com/profile.php?  id=100087015408684"> <i class="bi bi-facebook"></i></i> </a>
-                        <a class="mx-auto" target="_blank" href="https://www.twitter.com"> <i class="bi     bi-twitter"></i> </a>
+                        <a class="mx-auto" target="_blank" href="https://www.twitter.com"><i class="bi bi-twitter"></i> </a>
                         <a class="mx-auto" target="_blank" href="https://www.instagram.com/pcglobal9/"> <i  class="bi bi-instagram"></i></a>
                         <div class="dropdown dpdn-2">
                             <a role="button" class="bg-transparent border-0 fs-5 border-white border-start border-1 ms-4 text-white" data-bs-toggle="dropdown" href="#"><i class="mx-4 bi bi-person-circle"></i></a>
@@ -199,7 +200,7 @@
                     <h3><a class="fs-4" href="componentes/Perifericos.php">Periféricos</a></h3>          
                 </div>
                 <div class="col box">
-                    <a href="componentes/Fuentes de poder.php"><img src="images/Portafolio/Fuente de poder.jpg" alt="Iconos Redondos" height="240pxpx"   width="360px"></a>
+                    <a href="componentes/Fuentes de poder.php"><img src="images/Portafolio/Fuente de poder.jpg" alt="Iconos Redondos" height="240pxpx" width="360px"></a>
                     <h3><a class="fs-4" href="componentes/Fuentes de poder.php">Fuentes de poder</a></h3>          
                 </div>
         </div>

@@ -15,6 +15,7 @@ header nav{
     margin-top: 10px;
 }     
 header nav a{
+    z-index: 3;
     font-size: 14px;
     color: white;
     font-weight: bold;
@@ -22,7 +23,16 @@ header nav a{
     margin-left: 10px;
     padding: 10px 15px;
     font-family: 'Lobster', cursive;
-} 
+}
+header nav a.princ:hover{
+    color: #e7e3e3;
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.6);
+    -webkit-transition: all .2s;
+    -moz-transition: all .2s;
+    transition: all .2s;
+}
 #portafolio{
     background-color: whitesmoke; 
 }
