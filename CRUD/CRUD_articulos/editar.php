@@ -27,6 +27,11 @@ if(isset($_GET['id'])){
         $img = $_POST['img'];
         $cant = $_POST['cant'];
 
+        if($cant>0){
+            $q = "UPDATE articulos SET artEstado = 'Con stock' " ;
+            $r = mysqli_query($conn, $q);
+        } 
+
         $query = "UPDATE articulos INNER JOIN stock ON articulos.artCodigo = stock.artCodigo
         INNER JOIN categorias ON articulos.idCategoria = categorias.idCategoria
         INNER JOIN marcas ON articulos.idMarca = marcas.idMarca SET artNombre = '$name', artPrecio = '$precio', artImagen = '$img', cantStock = '$cant' WHERE articulos.artCodigo = $id";
@@ -69,5 +74,4 @@ if(isset($_GET['id'])){
         </div>
     </div>
 </div>
-
 <?php include("../includes/footer.php")?>

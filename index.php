@@ -119,7 +119,6 @@
         <div class="container mb-3">
             <h2 class="fw-bold">SERVICIOS</h2>
             <div class="row align-items-center g-0">
-            
                 <div class="col-sm-4 mx-auto card text-center mb-4" style="width: 290px;">
                     <img class="card-img" src="images/Dweb.jpg" alt="Web Design" height="165px" width="290px">
                     <div class="card-body">
@@ -133,7 +132,7 @@
                     <img class="card-img" src="images/Assembly.jpg" alt="Web Design" height="165px" width="290px">
                     <div class="card-body">
                         <h5 class="card-text">Ensamblaje</h5>
-                        <p class="card-text">Somos expertos en el ensablaje de las computadoras, con garantía de 2 años de cada pieza, (Incluye instalación del Sitema Operativo)</p>
+                        <p class="card-text">Somos expertos en el ensablaje de las computadoras, con garantía de 2 años de cada pieza, (Incluye instalación del Sistema Operativo)</p>
                         <a href="componentes/Ensamblaje/Ensamblaje.php" class="btn btn-outline-primary">Más detalles</a>
                     </div>
                 </div>
@@ -280,7 +279,7 @@
         
         <h1 class="fs-6 fw-bold">Términos comerciales ofrecidos a los clientes.</h1>
         
-        Al comprar un artículo, aceptas que: (i) eres responsable de leer el listado completo del artículo antes de comprometerte a comprarlo: (ii) celebras un contrato legalmente vinculante para comprar un artículo cuando te comprometed a comprar un artículo y completar el proceso de check-out.
+        Al comprar un artículo, aceptas que: (I) eres responsable de leer el listado completo del artículo antes de comprometerte a comprarlo: (II) celebras un contrato legalmente vinculante para comprar un artículo cuando te comprometed a comprar un artículo y completar el proceso de check-out.
         
          Los precios que cobramos por usar nuestros servicios / para nuestros productos se enumeran en la página web. Nos reservamos el derecho de cambiar nuestros precios para los productos que se muestran en cualquier momento y de corregir los errores de precios que pueden ocurrir inadvertidamente. Información adicional sobre precios e impuestos sobre las ventas está disponible en la página de pagos. 
         
@@ -292,13 +291,13 @@
         
         <h1 class="fs-6 fw-bold">Posesión de propiedad intelectual, derechos de autor y logos.</h1>
         
-        El Servicio y todos los materiales incluidos o transferidos, incluyendo, sin limitación, software, imágenes, texto, gráficos, logotipos, patentes, marcas registradas, marcas de servicio, derechos de autor, fotografías, audio, videos, música y todos los Derechos de Propiedad Intelectual relacionados con ellos, son la propiedad exclusiva de [Nombre del propietario dela página web]. Salvo que se indique explícitamente en este documento, no se considerará que nada en estos Términos crea una licencia en o bajo ninguno de dichos Derechos de Propiedad Intelectual, y tu aceptas no vender, licenciar, alquilar, modificar, distribuir, copiar, reproducir, transmitir, exhibir públicamente, realizar públicamente, publicar, adaptar, editar o crear trabajos derivados de los mismos. 
+        El Servicio y todos los materiales incluidos o transferidos, incluyendo, sin limitación, software, imágenes, texto, gráficos, logotipos, patentes, marcas registradas, marcas de servicio, derechos de autor, fotografías, audio, videos, música y todos los Derechos de Propiedad Intelectual relacionados con ellos, son la propiedad exclusiva de [Nombre del propietario de la página web]. Salvo que se indique explícitamente en este documento, no se considerará que nada en estos Términos crea una licencia en o bajo ninguno de dichos Derechos de Propiedad Intelectual, y tu aceptas no vender, licenciar, alquilar, modificar, distribuir, copiar, reproducir, transmitir, exhibir públicamente, realizar públicamente, publicar, adaptar, editar o crear trabajos derivados de los mismos. 
         
         <h1 class="fs-6 fw-bold">Limitación de responsabilidad.</h1>
         
         En la máxima medida permitida por la ley aplicable, en ningún caso el [propietario de la página web] será responsable por daños indirectos, punitivos, incidentales, especiales, consecuentes o ejemplares, incluidos, entre otros, daños por pérdida de beneficios, buena voluntad, uso, datos. u otras pérdidas intangibles, que surjan de o estén relacionadas con el uso o la imposibilidad de utilizar el servicio. 
         
-        En la máxima medida permitida por la ley aplicable, [el propietario la página web] no asume responsabilidad alguna por (i) errores, errores o inexactitudes de contenido; (ii) lesiones personales o daños a la propiedad, de cualquier naturaleza que sean, como resultado de tu acceso o uso de nuestro servicio; y (iii) cualquier acceso no autorizado o uso de nuestros servidores seguros y / o toda la información personal almacenada en los mismos.
+        En la máxima medida permitida por la ley aplicable, [el propietario la página web] no asume responsabilidad alguna por (I) errores, errores o inexactitudes de contenido; (II) lesiones personales o daños a la propiedad, de cualquier naturaleza que sean, como resultado de tu acceso o uso de nuestro servicio; y (III) cualquier acceso no autorizado o uso de nuestros servidores seguros y / o toda la información personal almacenada en los mismos.
         Derecho a cambiar y modificar los Términos.
         
         <h1 class="fs-6 fw-bold">Emails de promociones y contenido.</h1>
@@ -317,9 +316,6 @@
         
         Si tu página web incluye una comunidad de usuarios, recomendamos que los Términos de la página aclaren que todos los usuarios que se unen a una comunidad tienen un perfil público visible para los visitantes de la página y que su actividad pública (como sus publicaciones o comentarios) será visible a otros visitantes del sitio web.
       </p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-outline" data-bs-dismiss="modal">Cerrar</button>
       </div>
     </div>
   </div>

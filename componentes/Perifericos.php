@@ -1,6 +1,6 @@
 <?php include("includes/header.php") ?>
     <?php
-    $query = "SELECT COUNT(*) total FROM articulos WHERE idCategoria = 9";
+    $query = "SELECT COUNT(*) total FROM articulos WHERE idCategoria = 8";
     $result = mysqli_query($conn, $query); 
     $row = mysqli_fetch_assoc($result); 
     ?>
@@ -9,7 +9,7 @@
         </div> 
     <div class="my-4 grid grid-cols-1 sm:grid-cols-3  xl:grid-cols-5 text-center mx-16 gap-3">
         <?php
-            $query = "CALL PA_consulta_articulos_9();";
+            $query = "CALL PA_consulta_articulos_8();";
             $result = mysqli_query($conn, $query); 
 
             while ($row = mysqli_fetch_array($result)) { ?>
@@ -18,7 +18,7 @@
                 <div class="card-body">
                     <p class="card-title text-lg font-medium border-t-2 border-slate-800 mb-2"><?php echo $row['Nombre']?> </p>
                     <p class="card-text font-normal mb-3">$<?php echo $row['Precio']?> COP</p>
-                    <a href="fdp.php?id=<?php echo $row['id']?>" class="px-4 text-white rounded-md font-medium">Ver Especifíc.</a>
+                    <a href="prf.php?id=<?php echo $row['id']?>" class="px-4 text-white rounded-md font-medium">Ver Especifíc.</a>
                 </div>
             </div>
         <?php }?>
