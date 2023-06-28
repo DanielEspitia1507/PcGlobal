@@ -301,3 +301,8 @@ section h2{
         height: 460px;
     }
 }
+@media only screen and (min-width: 2050px){
+    .carousel img{
+        height: 1219px;
+    }
+}
