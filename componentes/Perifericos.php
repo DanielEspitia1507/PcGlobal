@@ -5,7 +5,7 @@
     $row = mysqli_fetch_assoc($result); 
     ?>
         <div class="flex mt-5 mb-4 justify-center font-bold text-lg sm:font-normal sm:text-3xl">
-        <h1>Tarjetas Gráficas - <?php echo $row['total']?> Resultados <i class="ms-1 bi bi-search text-sm sm:text-xl"></i></h1>
+        <h1>Periféricos - <?php echo $row['total']?> Resultados <i class="ms-1 bi bi-search text-sm sm:text-xl"></i></h1>
         </div> 
     <div class="my-4 grid grid-cols-1 sm:grid-cols-3  xl:grid-cols-5 text-center mx-16 gap-3">
         <?php
