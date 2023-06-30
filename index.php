@@ -23,12 +23,12 @@
     <title>PcGlobal</title>
 </head>
 <body>
-    <div class="home-wrapper" >
+    <div class="home-wrapper">
         <header>
             <div>                
                 <nav class="container-fluid navbar navbar-expand-sm justify-content-between">
                     <ul class="navbar-nav">
-                        <a href="#home" class="fw-bold princ">HOME</a>
+                        <a href="#home" class="fw-bold princ">INICIO</a>
                         <a href="#servicios" class="fw-bold princ">SERVICIOS</a>
                         <a href="#portafolio" class="fw-bold princ">TIENDA</a>
                         <a href="#contacto" class= "fw-bold princ">COMENTARIOS</a>
