@@ -23,7 +23,7 @@
     <title>PcGlobal</title>
 </head>
 <body>
-    <div class="home-wrapper" >
+    <div class="home-wrapper">
         <header>
             <div>                
                 <nav class="container-fluid navbar navbar-expand-sm justify-content-between">
@@ -51,7 +51,7 @@
                         <div class="dropdown dpdn-2">
                             <a role="button" class="bg-transparent border-0 fs-5 border-white border-start border-1 ms-4 text-white" data-bs-toggle="dropdown" href="#"><i class="mx-4 bi bi-person-circle"></i></a>
                             <ol class="dropdown-menu dropdown-menu-end mx-2">
-                                <li class="dropdown-header">Login & Register</li>
+                                <li class="dropdown-header">Login</li>
                                 <li class="dropdown-divider"></li>
                                 <li class="dropdown-item"><a class="dropdown-item" href="Login-register/index.php" class="fw-bold">Iniciar Sesión</a></li>
                                 <li class="dropdown-item"><a class="dropdown-item" href="pagina_constr/index.php" class="fw-bold">Crear Cuenta</a></li>
