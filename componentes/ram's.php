@@ -33,10 +33,10 @@
                         
                 <nav class="container-fluid navbar navbar-expand-sm justify-content-between">
                     <ul class="navbar-nav">
-                        <a href="../#home" class="fw-bold princ">INICIO</a>
-                        <a href="../#servicios" class="fw-bold princ">SERVICIOS</a>
-                        <a href="../#portafolio" class="fw-bold princ">TIENDA</a>
-                        <a href="../#contacto" class= "fw-bold princ">COMENTARIOS</a>                       
+                        <a href="../#home" class="fw-bold">HOME</a>
+                        <a href="../#servicios" class="fw-bold">SERVICIOS</a>
+                        <a href="../#portafolio" class="fw-bold">TIENDA</a>
+                        <a href="../#contacto" class= "fw-bold">COMENTARIOS</a>                        
                     </ul>
                 <div class="dropdown justify-content-between">
                     <button class="border-0 bg-transparent"><a href="../../../#home"><i class="bi bi-house fs-4 text-white ms-auto"></i></a></button>
