@@ -20,7 +20,6 @@
     <link rel="stylesheet" href="../../../css/normalize.css">
     <link rel="stylesheet" href="css/componentes2.css">
     <script src="js/app.js"></script>
-    <script src="//code.tidio.co/anucvq6wj7i4y0rb51rykuwdkco1lbde.js" async></script>
     <script src="js/formulario.js"></script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="website icon" href="../logo-img/logo-panther.png">

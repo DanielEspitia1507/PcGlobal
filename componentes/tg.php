@@ -22,14 +22,12 @@
     <script src="js/formulario.js"></script>
     <link rel="website icon" href="../logo-img/logo-panther.png">
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="//code.tidio.co/wmbt5ah4q76gqccxywn7jtddh8auveiy.js" async></script>
     <title>PcGlobal</title>
 
 </head>
 <body>
     <div class="home-wrapper" >
         <header>
-                        
                 <nav class="container-fluid navbar navbar-expand-sm justify-content-between">
                     <ul class="navbar-nav">
                         <a href="../#home" class="fw-bold princ">HOME</a>
