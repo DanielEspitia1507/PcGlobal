@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://kit.fontawesome.com/42c51a431b.js" crossorigin="anonymous"></script>
     @vite('resources/css/app.css')
+    <link rel="stylesheet" href="{{asset('fontawesome-free-6.4.0-web/css/all.min.css')}}">
     <title>Proof</title>
 </head>
 <body class="bg-white dark:bg-slate-900">
