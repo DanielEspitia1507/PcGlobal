@@ -12,5 +12,5 @@ class WebController extends Controller
     }
     public function proof(){
         return view('proof');
-    }
+    } 
 }
