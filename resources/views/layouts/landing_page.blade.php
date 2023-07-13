@@ -22,7 +22,8 @@
         @vite(['resources/css/boostrap.css','resources/js/boostrap.js',])
         @vite('resources/css/app.css')
 
-        <!-- Importacion Manual del Framework Fontwesome (Iconos) -->
+        <!-- Importacion Manual del Framework Fontwesome (Iconos) y JavaScript -->
+        <script src="{{ asset('js/app.js') }}"></script>
         <link rel="stylesheet" href="{{asset('fontawesome-free-6.4.0-web/css/all.min.css')}}">
 
         <!-- Titulo Principal Pagina web (Nombre empresa + Titulo Personalizado)-->

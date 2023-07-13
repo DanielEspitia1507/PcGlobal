@@ -1,10 +1,10 @@
-<section class="my-10 mx-auto">
+<section class="my-16 mx-auto" id="productos">
     <h1 class="text-center mb-10 text-2xl font-medium">Productos</h1>
-    <div class="grid grid-cols-4 gap-3">
+    <div class="grid grid-cols-1 sm:grid-cols-4 gap-3">
       @forelse ($lista as $item)
       {{-- Listación de productos --}}
           <div class="card">
-              <h2 class="text-center mt-1">{{$item->Marca}}</h2>
+              <h2 class="text-center mt-6 sm:mt-1">{{$item->Marca}}</h2>
               <img class="object-contain" src="{{$item->Imágen}}" alt="">
               <div class="card-body">
                 <h5 class="card-title text-center font-bold">{{$item->Nombre}}</h5>
