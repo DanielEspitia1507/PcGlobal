@@ -32,9 +32,9 @@
     {{-- 
         Nombre directiva: @yield('nombre_seccion','valor_default')
 
-        Explicacion: Esta directiva declara un componente asignandole un nombre y un valor por defecto en caso de no declararse en la vista que importa el componente.
+        Explicacion: Esta directiva declara un componente asignándole un nombre y un valor por defecto en caso de no declararse en la vista que importa el componente.
 
-        Nota: En caso de no declarar un valor por defecto y tampoco asignarle un valor en la vista que importa el componente, laravel reportara error
+        Nota: En caso de no declarar un valor por defecto y tampoco asignarle un valor en la vista que importa el componente, laravel reportará error
     --}}
     <body class="@yield('body_class','')">
 
