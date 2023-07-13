@@ -28,8 +28,3 @@
     color: rgb(116, 75, 204);
     font-size: 20px;
 }
-.card img{
-    width: 100%;
-    aspect-ratio: 4/3;
-    object-fit: contain;
-}
