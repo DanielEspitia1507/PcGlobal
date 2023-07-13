@@ -1,3 +1,4 @@
+<!-- Pie de Pagina -->
 <footer class="font-thin border-double border-t-4 border-black mx-12 p-3">
     <div class="flex justify-center gap-x-3 p-3 text-lg drop-shadow-xl icons">
         <i class="fa-brands fa-facebook"></i>

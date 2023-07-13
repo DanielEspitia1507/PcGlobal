@@ -1,18 +1,25 @@
 <?php
 
+use App\Http\Controllers\landingPageController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\WebController;
 
 /*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "web" middleware group. Make something great!
-|
+    Nombre Archivo: web.php
+
+    Objetivo: Este archivo contendra todas las rutas correspondientes a la landing page del sitio web
+    
+    Nota: Al requerir información de la BD se usara el controlador "landingPageController" para realizar dichas consultas
+
+    Vistas disponibles:
+
+        1. Home
+        2. 
+
+    --
 */
 
-Route::get('/',[WebController::class,'index'])->name('index');
-Route::get('/proof',[WebController::class,'proof'])->name('proof');
+Route::controller(landingPageController::class)->group(function(){
+
+    //Vista principal o Home
+    Route::get('/', 'index')->name('index');
+});
