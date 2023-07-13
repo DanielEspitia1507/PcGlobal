@@ -16,9 +16,9 @@ return new class extends Migration
             $table->id()->comment("Llave Primaria");
 
             /* Campos Personalizados */
-                $table->unsignedBigInteger('id_cliente')->nullable()->comment("Id Cliente");
+                $table->integer('id_cliente')->nullable()->comment("Id Cliente");
 
-                $table->unsignedBigInteger("id_trabajador")->nullable()->comment("Id Trabajador");
+                $table->integer("id_trabajador")->nullable()->comment("Id Trabajador");
 
                 $table->integer("id_estado")->nullable()->comment("Id estado PQRS");
 

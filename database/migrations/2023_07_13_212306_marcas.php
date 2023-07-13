@@ -11,20 +11,13 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('estados', function (Blueprint $table) {
+        Schema::create('marcas', function (Blueprint $table) {
             //Llave Primaria (Integer) (-2^31 a 2^31-1)
             $table->integer('id')->primary()->comment("Llave Primaria");
 
-            /* Campos Personalziados */
-                $table->string("nombre",20)->unique()->nullable()->comment("Nombre Estado");
-
-                $table->integer("id_area")->nullable()->comment("Id Area");
+            /* Campos Personalizados */
+                $table->string("nombre",50)->unique()->nullable()->comment("Nombre Marca");
             //
-
-            /* Llaves Foraneas */
-                $table->foreign("id_area")->references('id')->on('areas');
-            //
-
         });
     }
 
@@ -33,6 +26,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('estados');
+        Schema::dropIfExists('marcas');
     }
 };

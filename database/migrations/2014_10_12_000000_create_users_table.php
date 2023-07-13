@@ -12,8 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('users', function (Blueprint $table) {
-            //Llave Primaria (Unsigned Big Integer) (-2^63 a 2^63-1)
-            $table->id()->comment("Llave Primaria");
+            //Llave Primaria (Integer) (-2^31 a 2^31-1)
+            $table->integer('id')->primary()->comment("Llave Primaria");
 
             /* Campos Personalizados */
                 $table->string('nombres',30)->nullable()->comment("Nombres");

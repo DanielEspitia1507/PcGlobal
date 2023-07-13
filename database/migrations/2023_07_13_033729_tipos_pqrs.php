@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('tipo_pqrs', function (Blueprint $table) {
             //Llave Primaria (Integer) (-2^31 a 2^31-1)
-            $table->integer('id')->primary();
+            $table->integer('id')->primary()->comment("Llave Primaria");
 
             /* Campos Personalizados */
                 $table->string('nombre',15)->unique()->nullable()->comment('Nombre tipo PQRS');
