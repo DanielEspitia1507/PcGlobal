@@ -16,7 +16,9 @@ return new class extends Migration
             $table->id()->comment("Llave Primaria");
 
             /* Campos Personalizados */
-                $table->string('nombre_completo')->nullable()->unique()->comment("Nombre completo");
+                $table->string('nombres',30)->nullable()->comment("Nombres");
+
+                $table->string('apellidos',30)->nullable()->comment("Apellidos");
 
                 $table->integer('id_sexo')->nullable()->comment("Id Sexo");
 
@@ -30,9 +32,9 @@ return new class extends Migration
 
                 $table->string("direccion",255)->comment("Direccion de Vivienda");
 
-                $table->string('email')->unique()->nullable()->comment("Correo Electronico");
+                $table->string('email',255)->unique()->nullable()->comment("Correo Electronico");
 
-                $table->string('password')->unique()->nullable()->comment("Contraseña Hasheada");
+                $table->string('password',255)->unique()->nullable()->comment("Contraseña Hasheada");
 
                 $table->timestamp('email_verified_at')->nullable()->comment("Fecha y Hora validacion de correo electronico");
 
