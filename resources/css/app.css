@@ -1,16 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
-@media only screen and (max-width:570px){
-    .texto{
-        font-size: 12px;
-    }
-    .icons{
-        font-size: 13px;
-    }
-}
-.grid img{
-    aspect-ratio: 4/3;
-    object-fit: contain;
+header{
+    
 }
