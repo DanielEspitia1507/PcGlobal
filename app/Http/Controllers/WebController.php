@@ -11,6 +11,6 @@ class WebController extends Controller
         return view('welcome');
     }
     public function proof(){
-        return view('proof');
+        return view('proof/proof');
     } 
 }
