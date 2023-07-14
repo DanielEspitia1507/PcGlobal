@@ -30,8 +30,6 @@ return new class extends Migration
 
                 $table->date("fecha_nacimiento")->nullable()->comment("Fecha de Nacimiento");
 
-                $table->string("direccion",255)->comment("Direccion de Vivienda");
-
                 $table->string('email',255)->unique()->nullable()->comment("Correo Electronico");
 
                 $table->string('password',255)->unique()->nullable()->comment("Contraseña Hasheada");
