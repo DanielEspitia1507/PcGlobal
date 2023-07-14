@@ -13,7 +13,7 @@
   {{-- Envio de clases personalizadas a la etiqueta main, la cual se encuentra en el componente principal--}}
   @section('main_class','container my-10 text-justify mx-auto flex-grow  mx-2')
 
-  <div class="hidden sm:grid grid-cols-3 gap-y-2 sm:gap-1 imgs-landing">
+  <div class="hidden md:grid grid-cols-3 gap-y-2 sm:gap-1 imgs-landing">
   
     <div class="sm:col-span-2">
       <div id="carouselExampleAutoplaying" class="carousel slide flex" data-bs-ride="carousel">

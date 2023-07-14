@@ -2,7 +2,7 @@
 <header class="h-24 bg-indigo-600">
     <nav class="relative mx-16 list-none grid grid-cols-3 font-medium bg-transparent justify-around sm:justify-center text-md text-white h-full items-center text-sm gap-x-6 gap-y-3">
       <!-- Formulario de búsqueda -->
-      <div class="col-span-3 w-full sm:w-1/2 mx-auto justify-center">
+      <div class="col-span-3 sm:w-full md:w-2/3 lg:w-1/2 mx-auto justify-center">
         <form action="#" class="flex nav-search">
           <input type="text" class="w-full rounded-l-lg px-3 py-2 focus:ring-2 focus:ring-sky-500 text-gray-800" placeholder="¿Qué estás buscando?">
           <button class="bg-white py-2 px-4 rounded-r-lg focus:outline-none focus:ring-2 focus:ring-sky-500">
@@ -15,6 +15,7 @@
         <a href="{{route('index')}}" class="text-white hover:text-gray-400">
             <p>Logo</p>
         </a>
+        {{-- Ícono del menú al lado del logo --}}
         <a href="#" class="text-white hover:text-gray-400 flex items-center sm:hidden">
             <i class="fa-solid fa-bars"></i>
         </a>

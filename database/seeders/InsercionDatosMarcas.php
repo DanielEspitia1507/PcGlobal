@@ -9,8 +9,8 @@ class InsercionDatosMarcas extends Seeder
 {
     public function run()
     {
-        // Ruta del archivo CSV
-        $csvFilePath = '../data/Backup_Marcas.csv';
+        // Ruta del archivo CSV. La función (database_path) devuelve la ruta absoluta a la carpeta "database" del proyecto.
+        $csvFilePath = database_path('data/Backup_Marcas.csv');
         // Abre el archivo CSV, la 'r' indica que el archivo CSV se abrirá en modo de solo lectura.
         $file = fopen($csvFilePath, 'r');
 
