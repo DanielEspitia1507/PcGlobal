@@ -20,7 +20,11 @@ return new class extends Migration
                 //Llave Primaria (Integer) (-2^31 a 2^31-1)
                 $table->integer("id_marca")->nullable()->comment("Fk Id Marca");
 
+                $table->integer("id_categoria")->nullable()->comment("Fk Id Categoría");                      
+
                 $table->string("modelo",255)->unique()->nullable()->comment("Modelo del Producto");
+
+                $table->text("imagen")->nullable()->comment("Imágen del Producto");
 
                 $table->text("descripcion")->unique()->nullable()->comment("Descripcion del Producto");
 
@@ -32,6 +36,7 @@ return new class extends Migration
 
             /* Llaves Foraneas */
                 $table->foreign("id_marca")->references("id")->on("marcas");
+                $table->foreign("id_categoria")->references("id")->on("categorias");
             //
         });
     }

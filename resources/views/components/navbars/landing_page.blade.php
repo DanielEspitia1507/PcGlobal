@@ -1,8 +1,8 @@
-<!-- Barra de Navegacion -->
+<!-- Barra de Navegación -->
 <header class="h-24 bg-indigo-600">
     <nav class="relative mx-16 list-none grid grid-cols-3 font-medium bg-transparent justify-around sm:justify-center text-md 2xl:text-xl text-white h-full items-center text-sm gap-x-6 gap-y-3">
 
-        <!-- Icono/Link Home. Para los íconos se usa la etiqueta <i class="fa icono"></i> -->
+        <!--Organización NavBar tipo Grid. Para los íconos se usa la etiqueta <i class="fa icono"></i> -->
         <div class="nav-logo-pag flex relative">
             <a href="#" class="text-white hover:text-gray-400"><p>Logo página</p></a>
         </div>

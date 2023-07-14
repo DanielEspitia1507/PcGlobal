@@ -19,4 +19,17 @@
           </div>    
       @endforelse
     </div>
+    <div class="pagination flex justify-between mt-3 items-center">
+      @if ($lista->currentPage() > 1)
+        <button class="bg-indigo-600 px-4 py-1 text-white hover:text-gray-300 rounded">
+          <a href="{{ $lista->previousPageUrl() }}" class="hover:text-gray-300 pagination-link text-xl font-bold"><i class="fa-solid fa-arrow-left"></i></a>
+        </button>
+      @endif
+      <div class="px-3 py-2 flex gap-1">Número total de páginas:<span class="badge bg-danger flex items-center">{{ $numeroPaginas }}</span></div>
+      @if ($lista->hasMorePages())
+          <button class="bg-indigo-600 px-4 py-1 text-white hover:text-gray-300 rounded">
+            <a href="{{ $lista->nextPageUrl() }}" class="hover:text-gray-300 pagination-link text-xl font-bold"><i class="fa-solid fa-arrow-right"></i></a>
+          </button>
+      @endif
+    </div>
   </section>
