@@ -17,26 +17,26 @@ return new class extends Migration
 
             /* Campos Personalizados */
 
-                //Llave Primaria (Integer) (-2^31 a 2^31-1)
-                $table->integer("id_marca")->nullable()->comment("Fk Id Marca");
+            // Llave foránea id_marca
+            $table->unsignedInteger("id_marca")->nullable()->comment("Fk Id Marca");
 
-                $table->integer("id_categoria")->nullable()->comment("Fk Id Categoría");                      
+            $table->unsignedInteger("id_categoria")->nullable()->comment("Fk Id Categoría");                      
 
-                $table->string("modelo",255)->unique()->nullable()->comment("Modelo del Producto");
+            $table->string("modelo",255)->unique()->nullable()->comment("Modelo del Producto");
 
-                $table->text("imagen")->nullable()->comment("Imágen del Producto");
+            $table->text("imagen")->nullable()->comment("Imágen del Producto");
 
-                $table->text("descripcion")->unique()->nullable()->comment("Descripcion del Producto");
+            $table->text("descripcion")->unique()->nullable()->comment("Descripcion del Producto");
 
-                $table->string("precio",10)->nullable()->comment("Precio unitario del producto");
+            $table->string("precio",10)->nullable()->comment("Precio unitario del producto");
             //
 
             //Campos Create_at y Update_at
             $table->timestamps();
 
             /* Llaves Foraneas */
-                $table->foreign("id_marca")->references("id")->on("marcas");
-                $table->foreign("id_categoria")->references("id")->on("categorias");
+            $table->foreign("id_marca")->references("id")->on("marcas");
+            $table->foreign("id_categoria")->references("id")->on("categorias");
             //
         });
     }

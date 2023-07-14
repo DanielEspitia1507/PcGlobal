@@ -12,12 +12,8 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('marcas', function (Blueprint $table) {
-            //Llave Primaria (Integer) (-2^31 a 2^31-1)
-            $table->integer('id')->primary()->comment("Llave Primaria");
-
-            /* Campos Personalizados */
-                $table->string("nombre",50)->unique()->nullable()->comment("Nombre Marca");
-            //
+            $table->increments('id')->comment("Llave Primaria");
+            $table->string("nombre",50)->unique()->nullable()->comment("Nombre Marca");
         });
     }
 

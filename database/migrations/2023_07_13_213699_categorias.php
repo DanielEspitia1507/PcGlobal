@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('categorias', function (Blueprint $table) {
             //Llave Primaria (Integer) (-2^31 a 2^31-1)
-            $table->integer('id')->primary()->comment("Llave Primaria");
+            $table->increments('id')->comment("Llave Primaria");
 
             /* Campos Personalizados */
                 $table->string("nombre_categoria",255)->unique()->nullable()->comment("Nombre de la Categoría");

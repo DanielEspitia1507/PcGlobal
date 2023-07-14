@@ -11,9 +11,9 @@
   @section('body_class','flex flex-col min-h-screen bg-gray-100')
 
   {{-- Envio de clases personalizadas a la etiqueta main, la cual se encuentra en el componente principal--}}
-  @section('main_class','container my-10 text-justify mx-auto flex-grow')
+  @section('main_class','container my-10 text-justify mx-auto flex-grow  mx-2')
 
-  <div class="hidden sm:grid grid-cols-1 sm:grid-cols-3 mx-2 gap-y-2 sm:gap-1 imgs-landing">
+  <div class="hidden sm:grid grid-cols-3 gap-y-2 sm:gap-1 imgs-landing">
   
     <div class="sm:col-span-2">
       <div id="carouselExampleAutoplaying" class="carousel slide flex" data-bs-ride="carousel">
@@ -56,8 +56,67 @@
       <img src="{{ asset('img/landing/f-3.jpg')}}" alt="" class="rounded object-contain cursor-pointer hover:-rotate-1 transition-all duration-500">
     </div>
   </div>
-
-  {{-- Inclusión de la lista de los productos --}}
-  @include('landing_page.lista_productos')
+  <section class="mb-0 sm:my-16 mx-auto" id="categorias">
+    <div class="flex flex-col gap-y-1">
+      <h1 class="text-center text-2xl font-medium">Categorías de Productos</h1>
+      <h2 class="text-center mb-10 ">Encuentra los mejores componentes al mejor precio</h2>
+    </div>
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 bg-gray-100 gap-6 transition-all">
+      <div class="flex flex-col justify-center">
+        <a href="{{route('tarjetas_graficas')}}" class="hover:text-gray-800">
+          <img src="{{ asset('img/categorias/Tarjeta Gráfica.jpg')}}" class="rounded transition-all duration-300 hover:scale-95 hover:shadow-2xl" alt="Img de Tarjeta Gráfica">
+          <p class="text-center py-2 font-medium text-lg text-gray-800">Tarjetas Gráficas</p>
+        </a>
+      </div>
+      <div class="flex flex-col justify-center transition-all">
+        <a href="" class="hover:text-gray-800">
+          <img src="{{ asset('img/categorias/procesador.jpg')}}" class="rounded transition-all duration-300 hover:scale-95 hover:shadow-2xl" alt="Img de Procesador">
+          <p class="text-center py-2 font-medium text-lg">Procesadores</p>
+        </a>
+      </div>
+      <div class="flex flex-col justify-center transition-all">
+        <a href="" class="hover:text-gray-800">
+          <img src="{{ asset('img/categorias/Perifericos.jpg')}}" class="rounded transition-all duration-300 hover:scale-95 hover:shadow-2xl" alt="Img de Periféricos">
+          <p class="text-center py-2 font-medium text-lg">Periféricos</p>
+        </a>
+      </div>
+      <div class="flex flex-col justify-center transition-all">
+        <a href="" class="hover:text-gray-800">
+          <img src="{{ asset('img/categorias/mother-board.jpg')}}" class="rounded transition-all duration-300 hover:scale-95 hover:shadow-2xl" alt="Img de Mother-Board">
+          <p class="text-center py-2 font-medium text-lg">Tarjetas Madre</p>
+        </a>
+      </div>
+      <div class="flex flex-col justify-center transition-all">
+        <a href="" class="hover:text-gray-800">
+          <img src="{{ asset('img/categorias/Fuente de poder.jpg')}}" class="rounded transition-all duration-300 hover:scale-95 hover:shadow-2xl" alt="Img de FdP">
+          <p class="text-center py-2 font-medium text-lg">Fuentes de Poder</p>
+        </a>
+      </div>
+      <div class="flex flex-col justify-center transition-all">
+        <a href="" class="hover:text-gray-800">
+          <img src="{{ asset('img/categorias/ram.png')}}" class="rounded transition-all duration-300 hover:scale-95 hover:shadow-2xl" alt="Img de Ram">
+          <p class="text-center py-2 font-medium text-lg">Ram's</p>
+        </a>
+      </div>
+      <div class="flex flex-col justify-center transition-all">
+        <a href="" class="hover:text-gray-800">
+          <img src="{{ asset('img/categorias/Almacenamiento.jpg')}}" class="rounded transition-all duration-300 hover:scale-95 hover:shadow-2xl" alt="Img de Almcenamiento">
+          <p class="text-center py-2 font-medium text-lg">Almacenamiento</p>
+        </a>
+      </div>
+      <div class="flex flex-col justify-center transition-all">
+        <a href="" class="hover:text-gray-800">
+          <img src="{{ asset('img/categorias/cases.jpg')}}" class="rounded transition-all duration-300 hover:scale-95 hover:shadow-2xl" alt="Img de Cases">
+          <p class="text-center py-2 font-medium text-lg">Cases</p>
+        </a>
+      </div>
+      <div class="flex flex-col justify-center transition-all">
+        <a href="" class="hover:text-gray-800">
+          <img src="{{ asset('img/categorias/Monitores.jpg')}}" class="rounded transition-all duration-300 hover:scale-95 hover:shadow-2xl" alt="Img de Monitores">
+          <p class="text-center py-2 font-medium text-lg">Monitores</p>
+        </a>
+      </div>
+    </div>
+  </section>
   
 @endsection

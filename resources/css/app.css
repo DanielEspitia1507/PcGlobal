@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+/* Estilos de la barra de desplazamiento */
 body {
     /* Ocultar la barra de desplazamiento por defecto */
     overflow: auto;
@@ -10,33 +11,23 @@ body {
   
   /* Estilos de la barra de desplazamiento */
   body::-webkit-scrollbar {
-    width: 8px; /* Ancho de la barra de desplazamiento */
+    width: 8px; /* Define el ancho de la barra*/
   }
   
   body::-webkit-scrollbar-thumb {
-    
     background-color: rgb(97, 90, 240);
     border-radius: 4px; /* Redondeado de la barra */
   }
   
   body::-webkit-scrollbar-track {
-    background-color: #edf2f7; /* Color del fondo de la barra */
+    background-color: rgb(243 244 246); /* Color del fondo de la barra */
   }
-  
-.card img{
-    aspect-ratio: 4/3;
-}
+
+/* Estilos de la barra de navegación */
 nav{
     padding: 8px 10px 12px 10px;
 }
-.nav-busqueda{
-    will-change: left;
-    width: 100%;
-    height: 100%;
-}
 .nav-busqueda input{
-    height: 40px;
-    width: 100%;
     padding: 10px 60px 10px 15px;
 }
 
@@ -48,4 +39,11 @@ nav{
 
 .nav-search {
     column-gap: 0.10rem;
+}
+
+/* Estilos de las imágenes de las categorías de la landing */
+
+#categorias img{
+  aspect-ratio: 4/3;
+  object-fit: cover;
 }

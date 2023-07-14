@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::controller(landingPageController::class)->group(function(){
-
     //Vista principal o Home
     Route::get('/', 'index')->name('index');
+    Route::get('/categorias/tg', 'tg')->name('tarjetas_graficas');
 });
