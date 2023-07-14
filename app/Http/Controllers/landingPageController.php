@@ -6,6 +6,11 @@ use Illuminate\Pagination\LengthAwarePaginator;
 
 class landingPageController extends Controller
 {
+    /* 
+        Nombre Metodo:
+
+        Objetivo:
+    */
     public function index()
     {
         $results = DB::select('CALL PA_consulta_articulos');

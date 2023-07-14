@@ -1,8 +1,6 @@
 <?php
 
 use Illuminate\Database\Migrations\Migration;
-use Illuminate\Database\Schema\Blueprint;
-use Illuminate\Support\Facades\Schema;
 use Illuminate\Support\Facades\DB;
 
 return new class extends Migration
@@ -18,23 +16,23 @@ return new class extends Migration
             Objetivo: XXX-XXX
         */
         DB::unprepared('
-        CREATE PROCEDURE PA_consulta_articulos()
-        BEGIN
-            SELECT
-                productos.id AS "id",
-                modelo AS "Nombre",
-                precio AS "Precio",
-                imagen AS "Imágen",
-                nombre AS "Marca",
-                nombre_categoria AS "Categoría",
-                unidades_producto.id AS "Cantidad"
-            FROM
-                productos
-                INNER JOIN marcas ON productos.id_marca = marcas.id
-                INNER JOIN categorias ON productos.id_categoria = categorias.id
-                INNER JOIN unidades_producto ON productos.id = unidades_producto.id_producto;
-        END
-    ');
+            CREATE PROCEDURE PA_consulta_articulos()
+            BEGIN
+                SELECT
+                    productos.id AS "id",
+                    modelo AS "Nombre",
+                    precio AS "Precio",
+                    imagen AS "Imágen",
+                    nombre AS "Marca",
+                    nombre_categoria AS "Categoría",
+                    unidades_producto.id AS "Cantidad"
+                FROM
+                    productos
+                    INNER JOIN marcas ON productos.id_marca = marcas.id
+                    INNER JOIN categorias ON productos.id_categoria = categorias.id
+                    INNER JOIN unidades_producto ON productos.id = unidades_producto.id_producto;
+            END
+        ');
     
     }
 
@@ -43,7 +41,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        // Aquí puedes escribir el código para revertir el procedimiento almacenado si es necesario
+        //Borrar el procedimiento PA_consultar_articulos
         DB::unprepared('DROP PROCEDURE IF EXISTS PA_consulta_articulos');
     }
 };
