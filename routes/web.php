@@ -23,3 +23,9 @@ Route::controller(landingPageController::class)->group(function(){
     Route::get('/', 'index')->name('index');
     Route::get('/categorias/tg', 'tg')->name('tarjetas_graficas');
 });
+
+Route::middleware(['auth','role:admin'])->group(function () {
+    Route::get('/test', function () {
+        return "hola";
+    });
+});
