@@ -12,17 +12,28 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('entregas', function (Blueprint $table) {
-            //Llave Primaria (Integer) (-2^31 a 2^31-1)
-            $table->integer('id')->primary()->comment("Llave Primaria");
+            /* 
+                Nombre campo: id
+                Tipo: Llave Primaria
+
+                Caracteristicas:
+                    1.unsignedInteger -> Valores enteros de -2^31 a 2^31-1
+
+                    2.Unsigned -> No acepta valores Negativos
+
+                    3.auto_increment -> Valores Auto Incrementales
+                //
+            */
+            $table->increments('id')->comment("Llave Primaria");
 
             /* Campos Personalizados */
-                $table->integer('id_factura')->comment("Fk Id Factura");
+                $table->unsignedInteger('id_factura')->comment("Fk Id Factura");
 
-                $table->integer('id_trabajador')->nullable()->comment("Fk Id Trabajador");
+                $table->unsignedInteger('id_trabajador')->comment("Fk Id Trabajador");
 
-                $table->integer('id_tipo_entrega')->comment("Fk Id tipo de entrega");
+                $table->unsignedInteger('id_tipo_entrega')->comment("Fk Id tipo de entrega");
 
-                $table->integer('id_direccion')->nullable()->comment("Fk Id Direccion");
+                $table->unsignedInteger('id_direccion')->comment("Fk Id Direccion");
 
                 $table->datetime('fecha_entrega')->comment("Fecha y Hora entrega");
             //

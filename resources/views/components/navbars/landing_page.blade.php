@@ -27,7 +27,7 @@
       </div>      
       <!-- Enlaces de login y carrito -->
       <div class="nav-login justify-evenly hidden sm:flex">
-        <a href="#" class="hover:text-gray-200 -me-12"><i class="fa-regular fa-user"></i></a>
+        <a href="{{route("login")}}" class="hover:text-gray-200 -me-12"><i class="fa-regular fa-user"></i></a>
         <div class="border"></div>
         <p><a href="" class="hover:text-gray-200 -ms-12"><i class="fa-solid fa-cart-shopping"></i></a></p>
       </div>

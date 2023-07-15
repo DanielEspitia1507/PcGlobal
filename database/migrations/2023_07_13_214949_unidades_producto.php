@@ -12,15 +12,26 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('unidades_producto', function (Blueprint $table) {
-            //Llave Primaria (Unsigned Big Integer) (-2^63 a 2^63-1)
-            $table->id()->comment("Llave Primaria");
+            /* 
+                Nombre campo: id
+                Tipo: Llave Primaria
+
+                Caracteristicas:
+                    1.unsignedInteger -> Valores enteros de -2^31 a 2^31-1
+
+                    2.Unsigned -> No acepta valores Negativos
+
+                    3.auto_increment -> Valores Auto Incrementales
+                //
+            */
+            $table->increments('id')->comment("Llave Primaria");
 
             /* Campos Personalizados */
-                $table->integer("id_producto")->nullable()->comment("Fk Id producto");
+                $table->unsignedInteger("id_producto")->comment("Fk Id producto");
 
-                $table->string("serial",255)->unique()->nullable()->comment("Serial Unidad del producto");
+                $table->string("serial",255)->unique()->comment("Serial Unidad del producto");
 
-                $table->integer('id_factura')->nullable()->comment('Id factura de compra del producto');
+                $table->unsignedInteger('id_factura')->comment('Id factura de compra del producto');
             //
 
             //Campos Create_at y Update_at

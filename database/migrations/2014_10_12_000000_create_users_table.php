@@ -12,33 +12,44 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('users', function (Blueprint $table) {
-            //Llave Primaria (Integer) (-2^31 a 2^31-1)
-            $table->integer('id')->primary()->comment("Llave Primaria");
+            /* 
+                Nombre campo: id
+                Tipo: Llave Primaria
+
+                Caracteristicas:
+                    1.unsignedInteger -> Valores enteros de -2^31 a 2^31-1
+
+                    2.Unsigned -> No acepta valores Negativos
+
+                    3.auto_increment -> Valores Auto Incrementales
+                //
+            */
+            $table->increments('id')->comment("Llave Primaria");
 
             /* Campos Personalizados */
-                $table->string('nombres',30)->nullable()->comment("Nombres");
+                $table->string('nombres',30)->comment("Nombres");
 
-                $table->string('apellidos',30)->nullable()->comment("Apellidos");
+                $table->string('apellidos',30)->comment("Apellidos");
 
-                $table->integer('id_sexo')->nullable()->comment("Id Sexo");
+                $table->unsignedInteger('id_sexo')->comment("Id Sexo");
 
-                $table->integer("id_tip_doc")->nullable()->comment("Id tipo documento");
+                $table->unsignedInteger("id_tip_doc")->comment("Id tipo documento");
 
-                $table->string("num_doc",15)->unique()->nullable()->comment("Numero de Documento");
+                $table->string("num_doc",15)->unique()->comment("Numero de Documento");
 
-                $table->string("num_tel",10)->unique()->nullable()->comment("Numero Telefonico");
+                $table->string("num_tel",10)->unique()->comment("Numero Telefonico");
 
-                $table->date("fecha_nacimiento")->nullable()->comment("Fecha de Nacimiento");
+                $table->date("fecha_nacimiento")->comment("Fecha de Nacimiento");
 
-                $table->string('email',255)->unique()->nullable()->comment("Correo Electronico");
+                $table->string('email',255)->unique()->comment("Correo Electronico");
 
-                $table->string('password',255)->unique()->nullable()->comment("Contraseña Hasheada");
+                $table->string('password',255)->unique()->comment("Contraseña Hasheada");
 
-                $table->timestamp('email_verified_at')->nullable()->comment("Fecha y Hora validacion de correo electronico");
+                $table->timestamp('email_verified_at')->comment("Fecha y Hora validacion de correo electronico");
 
                 $table->rememberToken()->comment("Token 'recuerdame'");
 
-                $table->integer('id_estado')->nullable()->comment("Id estado cuenta");
+                $table->unsignedInteger("id_estado")->comment("Id estado cuenta");
             //
 
             //Campos Create_at y Update_at

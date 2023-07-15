@@ -12,11 +12,17 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // \App\Models\User::factory(10)->create();
+        /* Ejecucion Seeders (Ejecucion en Cascada) */
+        $this->call([
 
-        // \App\Models\User::factory()->create([
-        //     'name' => 'Test User',
-        //     'email' => 'test@example.com',
-        // ]);
+            //Llenado tabla marcas
+            InsercionDatosMarcas::class,
+
+            //Llenado tabla categorias
+            RegistrosCategorias::class
+
+            
+        ]);
+
     }
 }

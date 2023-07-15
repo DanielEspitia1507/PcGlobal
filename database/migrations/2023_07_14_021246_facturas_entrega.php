@@ -12,13 +12,24 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('facturas_venta', function (Blueprint $table) {
-            //Llave Primaria (Integer) (-2^31 a 2^31-1)
-            $table->integer('id')->primary()->comment("Llave Primaria");
+            /* 
+                Nombre campo: id
+                Tipo: Llave Primaria
+
+                Caracteristicas:
+                    1.unsignedInteger -> Valores enteros de -2^31 a 2^31-1
+
+                    2.Unsigned -> No acepta valores Negativos
+
+                    3.auto_increment -> Valores Auto Incrementales
+                //
+            */
+            $table->increments('id')->comment("Llave Primaria");
 
             /* Campos Personalizados */
-                $table->datetime("fecha_venta")->unique()->nullable()->comment("Fecha y Hora ejecucion venta");
+                $table->datetime("fecha_venta")->unique()->comment("Fecha y Hora ejecucion venta");
 
-                $table->integer('id_cliente')->nullable()->comment("Id Cliente");
+                $table->unsignedInteger('id_cliente')->comment("Id Cliente");
 
                 $table->string("subtotal",10)->comment("Subtotal Factura");
 

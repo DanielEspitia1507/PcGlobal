@@ -12,19 +12,30 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('pqrs', function (Blueprint $table) {
-            //Llave Primaria (Unsigned Big Integer) (-2^63 a 2^63-1)
-            $table->id()->comment("Llave Primaria");
+            /* 
+                Nombre campo: id
+                Tipo: Llave Primaria
+
+                Caracteristicas:
+                    1.unsignedInteger -> Valores enteros de -2^31 a 2^31-1
+
+                    2.Unsigned -> No acepta valores Negativos
+
+                    3.auto_increment -> Valores Auto Incrementales
+                //
+            */
+            $table->increments('id')->comment("Llave Primaria");
 
             /* Campos Personalizados */
-                $table->integer('id_cliente')->nullable()->comment("Id Cliente");
+                $table->unsignedInteger('id_cliente')->comment("Id Cliente");
 
-                $table->integer("id_trabajador")->nullable()->comment("Id Trabajador");
+                $table->unsignedInteger("id_trabajador")->comment("Id Trabajador");
 
-                $table->integer("id_estado")->nullable()->comment("Id estado PQRS");
+                $table->unsignedInteger("id_estado")->comment("Id estado PQRS");
 
-                $table->string("descripcion",255)->unique()->nullable()->comment("Descripcion de la PQRS");
+                $table->string("descripcion",255)->unique()->comment("Descripcion de la PQRS");
 
-                $table->string("respuesta",255)->nullable()->comment("Respuesta del Trabajador a la PQRS");
+                $table->string("respuesta",255)->comment("Respuesta del Trabajador a la PQRS");
             //
 
             //Campos Create_at y Update_at

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\authController;
 use App\Http\Controllers\landingPageController;
 use Illuminate\Support\Facades\Route;
 
@@ -21,11 +22,21 @@ use Illuminate\Support\Facades\Route;
 Route::controller(landingPageController::class)->group(function(){
     //Vista principal o Home
     Route::get('/', 'index')->name('index');
+
     Route::get('/categorias/tg', 'tg')->name('tarjetas_graficas');
 });
 
-Route::middleware(['auth','role:admin'])->group(function () {
-    Route::get('/test', function () {
-        return "hola";
+Route::middleware(['guest'])->group(function () {
+
+    Route::controller(authController::class)->group(function () {
+
+        Route::get('/register', 'registerView')->name('registerView');
+    });
+    
+});
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/test', function ($id) {
+        return "test";
     });
 });

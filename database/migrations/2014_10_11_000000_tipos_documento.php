@@ -12,13 +12,24 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('tipos_documento', function (Blueprint $table) {
-            //Llave Primaria (Integer) (-2^31 a 2^31-1)
-            $table->integer("id")->primary()->comment("Llave Primaria");
+            /* 
+                Nombre campo: id
+                Tipo: Llave Primaria
+
+                Caracteristicas:
+                    1.unsignedInteger -> Valores enteros de -2^31 a 2^31-1
+
+                    2.Unsigned -> No acepta valores Negativos
+
+                    3.auto_increment -> Valores Auto Incrementales
+                //
+            */
+            $table->increments('id')->comment("Llave Primaria");
 
             /* Campos Personalizados */
-                $table->string("nombre",40)->unique()->nullable()->comment("Nombre tipo de documento");
+                $table->string("nombre",40)->unique()->comment("Nombre tipo de documento");
 
-                $table->string("siglas",3)->unique()->nullable()->comment("Abreviatura/Sigla del Tipo Documento");
+                $table->string("siglas",3)->unique()->comment("Abreviatura/Sigla del Tipo Documento");
             //
         });
     }
