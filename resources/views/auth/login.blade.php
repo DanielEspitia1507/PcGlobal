@@ -23,7 +23,7 @@
 
     <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
 
-    <a href="{{route('register')}}">¿No tienes cuenta?, Registrate</a>
+    <a href="{{route('registerView')}}">¿No tienes cuenta?, Registrate</a>
   </form>
 
 @endsection
