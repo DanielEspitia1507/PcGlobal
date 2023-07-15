@@ -11,4 +11,7 @@ class tipos_documento extends Model
 
     //Desactivacion Campos update_at y create_at
     public $timestamps=false;
+
+    //Declaracion manual nombre tabla
+    protected $table="tipos_documento";
 }

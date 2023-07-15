@@ -45,7 +45,7 @@ return new class extends Migration
 
                 $table->string('password',255)->unique()->comment("Contraseña Hasheada");
 
-                $table->timestamp('email_verified_at')->comment("Fecha y Hora validacion de correo electronico");
+                $table->timestamp('email_verified_at')->nullable()->comment("Fecha y Hora validacion de correo electronico");
 
                 $table->rememberToken()->comment("Token 'recuerdame'");
 
