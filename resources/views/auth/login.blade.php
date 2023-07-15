@@ -8,7 +8,7 @@
 @section('content')
 
   <form action="{{route("login")}}" method="post">
-
+    {{--Tokem de Seguridad--}}
     @csrf
 
     <div class="mb-3">
@@ -22,6 +22,8 @@
     </div>
 
     <button type="submit" class="btn btn-primary">Iniciar Sesion</button>
+
+    <a href="{{route('register')}}">¿No tienes cuenta?, Registrate</a>
   </form>
 
 @endsection

@@ -14,22 +14,20 @@ class authController extends Controller
     /*
         Nombre Metodo: redirect
 
-        Objetivo: Valiadar el rol del usuario y realizar su respectiva redireccion al dashboard correspondiente
+        Objetivo: Validar el rol del usuario y realizar su respectiva redirección al dashboard correspondiente
     */
     public function redirect(){
 
-        //Obtener toda la informacion del usuario logueado
+        //Obtener toda la información del usuario autenticado
         $info_usuario=User::find(Auth::user()->id);
 
         //Obtener todos los roles que tenga el usuario y seleccionar el primero
         $rol=$info_usuario->getRoleNames()[0];
 
-        var_dump($rol); 
-
         /*
-            Explicacion: Segun el rol recuperado, se realizara la respectiva redireccion a su dashboard correspondiente
+            Explicación: Según el rol recuperado, se realizará la respectiva redirección a su dashboard correspondiente
 
-            Nota: A causa de que el personal administrativo empleara siempre el mismo dahsboard, se agrupan sus case, para que evitar repetir codigo inecesario
+            Nota: A causa de que el personal administrativo empleara siempre el mismo dashboard, se agrupan sus case, para que evitar repetir codigo innecesario
         */
         switch($rol){
             case "gerente":
@@ -43,15 +41,15 @@ class authController extends Controller
             case "analista_inventario":
 
             break;
-            
+
             case "servicio_cliente":
-                
+
             break;
 
             case "cliente":
                 return redirect()->route("clients.dashboard");
             break;
         }
-        
+
     }
 }
