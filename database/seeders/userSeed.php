@@ -25,7 +25,7 @@ class userSeed extends Seeder
         */
         while(($registro=fgetcsv($scvUsers,2000,";"))!=FALSE){
             //Consulta o creacion del rol que ocupara el usuario
-            $rol=Role::findOrCreate($registro[10]);
+            $rol=Role::findByName($registro[10]);
         
             //Buscar y eliminar caracteres especiales en la primera columna de los registros
             $registro[0]=str_replace("﻿","",$registro[0]);

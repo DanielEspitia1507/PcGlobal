@@ -7,36 +7,46 @@ use Illuminate\Support\Facades\Route;
 /*
     Nombre Archivo: web.php
 
-    Objetivo: Este archivo contendra todas las rutas correspondientes a la landing page del sitio web
-    
-    Nota: Al requerir información de la BD se usara el controlador "landingPageController" para realizar dichas consultas
+    Manifiesto:
 
-    Vistas disponibles:
+        Landing Page:
+            1. Home
+            2. Categorias
+        --
 
-        1. Home
-        2. 
+        Auth:
+            1. Registro
+            2. Ruta de redireccion
+            3. Login (Ruta proporcionada por Fortify)
+        --
 
     --
 */
 
-Route::controller(landingPageController::class)->group(function(){
-    //Vista principal o Home
-    Route::get('/', 'index')->name('index');
+/*
+    Nota: La landing page al requerir informacion actualizada de la base de datos, se emplea un controlador el cual realizara dichos procesos
+*/
+    Route::controller(landingPageController::class)->group(function(){
+        //Vista: Home
+        Route::get('/', 'index')->name('index');
 
-    Route::get('/categorias/tg', 'tg')->name('tarjetas_graficas');
-});
-
-Route::middleware(['guest'])->group(function () {
-
-    Route::controller(authController::class)->group(function () {
-
-        Route::get('/register', 'registerView')->name('registerView');
+        //Vista: Categorias
+        Route::get('/categorias/tg', 'tg')->name('tarjetas_graficas');
     });
-    
-});
+//
 
-Route::middleware(['auth'])->group(function () {
-    Route::get('/test', function ($id) {
-        return "test";
+//Rutas de Autenticacion para usuarios que no hayan iniciado sesion (guest)
+    Route::middleware(['guest'])->group(function () {
+
+        //Consultar/Solicitar vista de registro de clientes
+        Route::get('/register', [authController::class,'registerView'])->name('registerView');
     });
-});
+//
+
+//Rutas accesibles unicamente por usuarios logueados (auth)
+    Route::middleware(['auth'])->group(function () {
+
+        //Ruta encargada de realizar la redireccion al dashboard segun el rol del usuario
+        Route::get('/redirect',[authController::class,'redirect']);
+    });
+//
