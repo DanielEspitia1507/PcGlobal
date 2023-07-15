@@ -28,11 +28,16 @@ class FortifyServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        Fortify::loginView('auth.login');
+        /* Definición Vistas de Autenticación */
 
-        Fortify::registerView(function(){
-            return redirect()->route('registerView');
-        });
+            //Vista Login
+            Fortify::loginView('auth.login');
+
+            //Vista Registro (Empleando Controlador Personalizado)
+            Fortify::registerView(function(){
+                return redirect()->route('registerView');
+            });
+        //
 
         Fortify::createUsersUsing(CreateNewUser::class);
         Fortify::updateUserProfileInformationUsing(UpdateUserProfileInformation::class);

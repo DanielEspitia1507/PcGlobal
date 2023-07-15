@@ -17,9 +17,9 @@ return new class extends Migration
     
             Objetivo: XXX-XXX
         */
-        DB::statement("
+        // DB::statement("
 
-        ");
+        // ");
     }
 
     /**
