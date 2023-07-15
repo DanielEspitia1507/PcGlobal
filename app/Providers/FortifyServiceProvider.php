@@ -6,6 +6,7 @@ use App\Actions\Fortify\CreateNewUser;
 use App\Actions\Fortify\ResetUserPassword;
 use App\Actions\Fortify\UpdateUserPassword;
 use App\Actions\Fortify\UpdateUserProfileInformation;
+use App\Http\Controllers\authController;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;
@@ -28,18 +29,12 @@ class FortifyServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        /* Definición Vistas de Autenticación */
+        Fortify::loginView('auth.login');
 
-            //Vista Login
-            Fortify::loginView('auth.login');
+        Fortify::registerView(function(){
+            return redirect()->route('registerView');
+        });
 
-            //Vista Registro (Empleando Controlador Personalizado)
-            Fortify::registerView(function(){
-                return redirect()->route('registerView');
-            });
-        //
-
-        Fortify::createUsersUsing(CreateNewUser::class);
         Fortify::updateUserProfileInformationUsing(UpdateUserProfileInformation::class);
         Fortify::updateUserPasswordsUsing(UpdateUserPassword::class);
         Fortify::resetUserPasswordsUsing(ResetUserPassword::class);

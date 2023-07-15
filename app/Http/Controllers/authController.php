@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
 class authController extends Controller
@@ -51,5 +52,9 @@ class authController extends Controller
             break;
         }
 
+    }
+
+    public function clientRegister(Request $request){
+        return $request;
     }
 }
