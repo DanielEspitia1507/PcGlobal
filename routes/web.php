@@ -37,8 +37,11 @@ use Illuminate\Support\Facades\Route;
 
 //Rutas de Autenticacion para usuarios que no hayan iniciado sesion (guest)
     Route::middleware(['guest'])->group(function () {
+
         //Consultar/Solicitar vista de registro de clientes
-        Route::get('/register-register', [authController::class,'registerView'])->name('registerView');
+        Route::get('/register', [authController::class,'registerView'])->name('register');
+
+        Route::post('/register',[authController::class,'clientRegister'])->name('clientRegister');
     });
 //
 

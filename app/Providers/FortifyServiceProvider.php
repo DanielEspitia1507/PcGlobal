@@ -6,6 +6,7 @@ use App\Actions\Fortify\CreateNewUser;
 use App\Actions\Fortify\ResetUserPassword;
 use App\Actions\Fortify\UpdateUserPassword;
 use App\Actions\Fortify\UpdateUserProfileInformation;
+use App\Http\Controllers\authController;
 use Illuminate\Cache\RateLimiting\Limit;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\RateLimiter;
@@ -30,16 +31,26 @@ class FortifyServiceProvider extends ServiceProvider
     {
         /* Definición Vistas de Autenticación */
 
-            //Vista Login
+            /* 
+                Vista: Login
+
+                Nota: Se realiza la redireccion de forma estandar,a provechando los metodos basicos de Fortify
+            */
             Fortify::loginView('auth.login');
 
-            //Vista Registro (Empleando Controlador Personalizado)
+            /*
+                Vista: Registro
+
+                Nota: Se realiza la redireccion de la vista a traves de un controlador personalizado, con el fin de poder enviar informacion de la BD a la vista
+            */
             Fortify::registerView(function(){
-                return redirect()->route('registerView');
+                return redirect()->route('register');
             });
         //
 
-        Fortify::createUsersUsing(CreateNewUser::class);
+        //Definicion del controladdor que se empleara para la creacion de los usuarios
+        Fortify::createUsersUsing(authController::class);
+
         Fortify::updateUserProfileInformationUsing(UpdateUserProfileInformation::class);
         Fortify::updateUserPasswordsUsing(UpdateUserPassword::class);
         Fortify::resetUserPasswordsUsing(ResetUserPassword::class);

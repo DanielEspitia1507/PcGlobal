@@ -7,7 +7,7 @@
 {{-- Declaracion contenido principal de la pagina web --}}
 @section('content')
 
-  <form action="{{route("register")}}" method="post">
+  <form action="{{route("clientRegister")}}" method="post">
     {{--Tokem de Seguridad--}}
     @csrf
 
