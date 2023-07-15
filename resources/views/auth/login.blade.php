@@ -7,8 +7,15 @@
 {{-- Declaracion contenido principal de la pagina web --}}
 @section('content')
 
+
+  {{-- Declaracion y envio de clases personalidas a la etiqueta body presente en el componente principal--}}
+  @section('body_class','flex flex-col min-h-screen bg-gray-100')
+
+  {{-- Envio de clases personalizadas a la etiqueta main, la cual se encuentra en el componente principal--}}
+  @section('main_class','container my-10 text-justify mx-auto flex-grow  mx-2')
+
   <form action="{{route("login")}}" method="post">
-    {{--Tokem de Seguridad--}}
+    {{--Tóken de Seguridad--}}
     @csrf
 
     <div class="mb-3">

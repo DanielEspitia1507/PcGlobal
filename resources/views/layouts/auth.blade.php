@@ -39,6 +39,9 @@
     --}}
     <body class="@yield('body_class','')">
 
+        {{-- Importancion Barra de navegacion --}}
+        @include('components.navbars.landing_page')
+        
         <main class="@yield('main_class','')">
 
             {{-- Importacion contenido principal pagina web --}}
