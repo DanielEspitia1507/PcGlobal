@@ -32,8 +32,8 @@
     </div>
 
     <div class="mb-3">
-      <label for="id_tipo_doc" class="form-label">Tipo Documento</label>
-      <select class="form-select" name="id_tipo_doc" id="id_tipo_doc" required>
+      <label for="id_tip_doc" class="form-label">Tipo Documento</label>
+      <select class="form-select" name="id_tip_doc" id="id_tip_doc" required>
         <option selected >Seleccione</option>  
         @foreach ($tipos_documento as $tipo_documento)
           <option value="{{$tipo_documento->id}}">{{$tipo_documento->siglas}} - {{$tipo_documento->nombre}}</option>

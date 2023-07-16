@@ -72,6 +72,11 @@ class authController extends Controller
 
     }
 
+    /*
+        Nombre Metodo: clientRegister
+
+        Objetivo: Realizar el registro del cliente empleando el registro almacenado correspondiente
+    */
     public function clientRegister(authValidate $request){
 
         /* Guardado informacion del formulario en variables */
@@ -90,7 +95,7 @@ class authController extends Controller
         $datetime=date("Y-m-d H:i:s");
 
         //Ejecutar el Procedimiento con los datos ingresados
-        DB::statement("CALL registrarUsuario('$nombres','$apellidos','$id_sexo','$id_tip_doc','$num_doc','$num_tel','$fecha_nacimiento','$email','$password','$datetime')");
+        DB::statement("CALL PA_registrar_usuario('$nombres','$apellidos','$id_sexo','$id_tip_doc','$num_doc','$num_tel','$fecha_nacimiento','$email','$password','$datetime')");
 
         //Consultar el Id del usuario recien creado
         $registro_usuario=DB::select('select id from users where nombres = ? AND apellidos = ?', [$nombres,$apellidos]);
@@ -100,5 +105,8 @@ class authController extends Controller
 
         //Asignacion del Rol al usuario
         $registro_usuario->assignRole('cliente');
+
+        //Redireccion al home
+        return redirect()->route("index");
     }
 }   

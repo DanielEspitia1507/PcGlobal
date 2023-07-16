@@ -44,7 +44,7 @@ return new class extends Migration
             Objetivo: Realizar la creación del nuevo usuario
         */
         DB::statement("
-            CREATE PROCEDURE PA_registrarUsuario(
+            CREATE PROCEDURE PA_registrar_usuario(
                 IN nombres varchar(30),
                 IN apellidos varchar(30),
                 IN id_sexo int,
@@ -75,9 +75,12 @@ return new class extends Migration
     public function down(): void
     {
         //Borrar el procedimiento PA_consultar_tipos_documento"
-        DB::statement("DROP IF EXISTS PA_consultar_tipos_documento");
+        DB::statement("DROP PROCEDURE IF EXISTS PA_consultar_tipos_documento;");
 
         //Borrar el procedimiento PA_consultar_sexos"
-        DB::statement("DROP IF EXISTS PA_consultar_sexos");
+        DB::statement("DROP PROCEDURE IF EXISTS PA_consultar_sexos");
+
+        //Borrar el procedimiento PA_registrar_usuario"
+        DB::statement("DROP PROCEDURE IF EXISTS PA_registrar_usuario;");
     }
 };
