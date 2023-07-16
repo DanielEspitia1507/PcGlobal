@@ -1,0 +1,41 @@
+{{-- Declaracion e importacion componente principal --}}
+@extends('layouts.landing_page')
+
+{{-- Declaracion complemtento etiqueta title del Header, la variable $categoria se pasa mediante el controlador y se detecta con el switch --}}
+@section('title', $categoria)
+
+
+{{-- Declaracion contenido principal de la pagina web --}}
+@section('content')
+
+  {{-- Declaracion y envio de clases personalidas a la etiqueta body presente en el componente principal--}}
+  @section('body_class','flex flex-col min-h-screen bg-gray-100')
+
+  {{-- Envio de clases personalizadas a la etiqueta main, la cual se encuentra en el componente principal--}}
+  @section('main_class','container mt-3 mb-10 text-justify mx-auto flex-grow mx-2')
+  
+  @if (isset($error))
+    <div class="flex flex-col w-full sm:w-1/2 mx-auto col-span-3">
+      <p class="bg-red-600 text-center py-2 text-white font-semibold rounded">{{$error}}</p>  
+    </div>
+  @else
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 productos gap-4">
+      @forelse ($productos as $item)
+        <div class="my-3 border rounded shadow">
+          <h3 class="p-3 text-center mx-10 border-b border-gray-600 font-medium">{{$item->Nombre}}</h3>
+          <img src="{{ asset('storage/' . $item->Imágen) }}" alt="{{ $item->Nombre}}" class="my-3"> 
+          {{-- Se accede a la carpeta 'storage/' y se accede a la posicón del registro para cargar la imágen --}}
+          <p class="text-center py-2 border-t border-gray-600 mx-10">${{ number_format($item->Precio, 0, '.', '.') }} COP</p>
+          {{-- El segundo argumento de number_format especifica la cantidad de decimales (en este caso, 0), el tercer argumento es el separador decimal (en este caso, un punto) y el cuarto argumento es el separador de miles (también un punto). --}}
+          <p class="flex">
+            <a href="{{route('index', [$item->id])}}" class="bg-indigo-600 hover:bg-indigo-700 text-center mx-auto mb-3 rounded text-white py-2 px-8">Detalles</a>
+          </p>
+        </div>
+      @empty
+        <div class="flex flex-col w-full sm:w-1/2 mx-auto col-span-3">
+          <p class="bg-red-600 text-center py-2 text-white font-semibold rounded">No hay productos</p>
+        </div>
+      @endforelse
+    </div>
+  @endif
+@endsection

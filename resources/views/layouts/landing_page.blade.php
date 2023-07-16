@@ -47,7 +47,7 @@
             {{-- Importacion contenido principal pagina web --}}
             @yield('content')
 
-        </main>
+        </main>                   
 
         {{-- Importancion Pie de Pagina --}}
         @include('components.footer')
