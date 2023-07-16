@@ -40,6 +40,9 @@ use Illuminate\Support\Facades\Route;
 
         //Consultar/Solicitar vista de registro de clientes
         Route::get('/register', [authController::class,'registerView'])->name('registerView');
+
+        //Enviar datos del formulario de registro al controlador correspondiente
+        Route::post('/resgister', [authController::class,'clientRegister'])->name("clientRegister");
     });
 //
 
