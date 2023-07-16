@@ -30,8 +30,8 @@ use Illuminate\Support\Facades\Route;
         //Vista: Home
         Route::get('/', 'index')->name('index');
 
-        //Vista: Categorias
-        Route::get('/categorias/tg', 'tg')->name('tarjetas_graficas');
+        // Vista: Categorias
+            Route::get('/categorias/{categoria}', 'categoria')->name('categoria');
     });
 //
 
