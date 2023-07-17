@@ -31,7 +31,7 @@ use Illuminate\Support\Facades\Route;
         Route::get('/', 'index')->name('index');
 
         // Vista: Categorias
-            Route::get('/categorias/{categoria}', 'categoria')->name('categoria');
+        Route::get('/categorias/{categoria}', 'categoria')->name('categoria');
     });
 //
 
@@ -40,13 +40,16 @@ use Illuminate\Support\Facades\Route;
 
         //Consultar/Solicitar vista de registro de clientes
         Route::get('/register', [authController::class,'registerView'])->name('registerView');
+
+        //Enviar datos del formulario de registro al controlador correspondiente
+        Route::post('/resgister', [authController::class,'clientRegister'])->name("clientRegister");
     });
 //
 
 //Rutas accesibles unicamente por usuarios logueados (auth)
     Route::middleware(['auth'])->group(function () {
 
-        //Ruta encargada de realizar la redireccion al dashboard segun el rol del usuario
+        //Ruta encaqrgada de realizar la redireccion al dashboard segun el rol del usuario
         Route::get('/redirect',[authController::class,'redirect']);
     });
 //
