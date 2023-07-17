@@ -16,9 +16,10 @@
   
   @if (isset($error))
     <div class="flex flex-col w-full sm:w-1/2 mx-auto col-span-3">
-      <p class="bg-red-600 text-center py-2 text-white font-semibold rounded">{{$error}}</p>  
+      <p class="bg-red-600 text-center py-2 text-white font-semibold rounded"><i class="fa-solid fa-triangle-exclamation"></i> {{$error}}</p>  
     </div>
   @else
+    <h1 class="text-center font-bold text-2xl py-10">{{$categoria}}</h1>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 productos gap-4">
       @forelse ($productos as $item)
         <div class="my-3 border rounded shadow">
@@ -28,12 +29,12 @@
           <p class="text-center py-2 border-t border-gray-600 mx-10">${{ number_format($item->Precio, 0, '.', '.') }} COP</p>
           {{-- El segundo argumento de number_format especifica la cantidad de decimales (en este caso, 0), el tercer argumento es el separador decimal (en este caso, un punto) y el cuarto argumento es el separador de miles (también un punto). --}}
           <p class="flex">
-            <a href="{{route('index', [$item->id])}}" class="bg-indigo-600 hover:bg-indigo-700 text-center mx-auto mb-3 rounded text-white py-2 px-8">Detalles</a>
+            <a href="{{$item->id}}" class="bg-indigo-600 hover:bg-indigo-700 text-center mx-auto mb-3 rounded text-white py-2 px-8">Detalles</a>
           </p>
         </div>
       @empty
         <div class="flex flex-col w-full sm:w-1/2 mx-auto col-span-3">
-          <p class="bg-red-600 text-center py-2 text-white font-semibold rounded">No hay productos</p>
+          <p class="bg-red-600 text-center py-2 text-white font-semibold rounded">Por el momento no hay productos <i class="fa-regular fa-circle-xmark"></i></p>
         </div>
       @endforelse
     </div>

@@ -39,6 +39,9 @@ class DatabaseSeeder extends Seeder
             //Llenado tabla: categorias
             RegistrosCategorias::class,
 
+            //Llenado tabla: productos
+            productos::class,
+
         ]);
 
     }
