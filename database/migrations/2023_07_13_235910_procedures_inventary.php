@@ -232,7 +232,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        //Borrar el procedimiento PA_consultar_articulos
+        //Borrar los procedimientos almacenados
         DB::unprepared('DROP PROCEDURE IF EXISTS PA_consulta_articulos_tg');
         DB::unprepared('DROP PROCEDURE IF EXISTS PA_consulta_articulos_proc');
         DB::unprepared('DROP PROCEDURE IF EXISTS PA_consulta_articulos_almac');

@@ -30,6 +30,9 @@ use Illuminate\Support\Facades\Route;
         //Vista: Home
         Route::get('/', 'index')->name('index');
 
+        //Vista: Categorías landing
+        Route::get('/#categorias', 'index')->name('categorias');
+
         // Vista: Categorias
         Route::get('/categorias/{categoria}', 'categoria')->name('categoria');
     });

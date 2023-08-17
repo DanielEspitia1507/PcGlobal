@@ -22,10 +22,9 @@
         @vite(['resources/css/boostrap.css','resources/js/boostrap.js',])
         @vite('resources/css/app.css')
 
-        <!-- Importacion Manual del Framework Fontwesome (Iconos) y JavaScript -->
-        <script src="{{ asset('js/app.js') }}"></script>
+        <!-- Importacion Manual del Framework Fontwesome (Iconos) -->
         <link rel="stylesheet" href="{{asset('fontawesome-free-6.4.0-web/css/all.min.css')}}">
-
+        
         <!-- Titulo Principal Pagina web (Nombre empresa + Titulo Personalizado)-->
         <title>PcGlobal | @yield('title','Home')</title>
     </head>
@@ -34,24 +33,27 @@
         Nombre directiva: @yield('nombre_seccion','valor_default')
 
         Explicacion: Esta directiva declara un componente asignándole un nombre y un valor por defecto en caso de no declararse en la vista que importa el componente.
-
-        Nota: En caso de no declarar un valor por defecto y tampoco asignarle un valor en la vista que importa el componente, laravel reportará error
-    --}}
-    <body class="@yield('body_class','')">
-
-        {{-- Importancion Barra de navegacion --}}
-        @include('components.navbars.landing_page')
         
-        <main class="@yield('main_class','')">
-
-            {{-- Importacion contenido principal pagina web --}}
-            @yield('content')
-
-        </main>
-
-        {{-- Importancion Pie de Pagina --}}
-        @include('components.footer')
-
-    </body>
-
-</html>
+        Nota: En caso de no declarar un valor por defecto y tampoco asignarle un valor en la vista que importa el componente, laravel reportará error
+        --}}
+        <body class="@yield('body_class','')">
+            
+            {{-- Importancion Barra de navegacion --}}
+            @include('components.navbars.landing_page')
+            
+            <main class="@yield('main_class','')">
+                
+                {{-- Importacion contenido principal pagina web --}}
+                @yield('content')
+                
+            </main>
+            
+            {{-- Importancion Pie de Pagina --}}
+            @include('components.footer')
+            {{-- Importación manual de archivos JavaScript --}}
+            <script src="{{ asset('js/app.js') }}"></script>
+            
+        </body>
+        
+        </html>
+        

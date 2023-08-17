@@ -15,8 +15,10 @@
   @section('main_class','container mt-3 mb-10 text-justify mx-auto flex-grow mx-2')
   
   @if (isset($error))
-    <div class="flex flex-col w-full sm:w-1/2 mx-auto col-span-3">
-      <p class="bg-red-600 text-center py-2 text-white font-semibold rounded"><i class="fa-solid fa-triangle-exclamation"></i> {{$error}}</p>  
+    <div class="flex flex-col w-full sm:w-1/2 mx-auto">
+      <p class="bg-red-600 text-center py-2 text-white font-semibold rounded">
+        <i class="fa-solid fa-triangle-exclamation me-3"></i> {{$error}}
+      </p>  
     </div>
   @else
     <h1 class="text-center font-bold text-2xl py-10">{{$categoria}}</h1>
@@ -34,7 +36,9 @@
         </div>
       @empty
         <div class="flex flex-col w-full sm:w-1/2 mx-auto col-span-3">
-          <p class="bg-red-600 text-center py-2 text-white font-semibold rounded">Por el momento no hay productos <i class="fa-regular fa-circle-xmark"></i></p>
+          <p class="bg-red-600 text-center py-2 text-white font-semibold rounded">
+            Por el momento no hay productos <i class="fa-regular fa-circle-xmark ms-1"></i>
+          </p>
         </div>
       @endforelse
     </div>

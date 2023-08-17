@@ -20,7 +20,7 @@
       <div class="nav-right flex gap-12">
         <!-- Enlaces de productos -->
         <div class="nav-productos justify-evenly hidden sm:flex gap-4 ps-3">
-          <p><a class="hover:text-gray-200" href="{{url('../#categorias')}}">Categorías</a></p>
+          <p><a class="hover:text-gray-200" href="{{route('categorias')}}">Categorías</a></p>
           <p><a class="hover:text-gray-200" href="#">PQRS</a></p>
         </div>
         <!-- Enlaces de login y carrito -->
@@ -32,7 +32,7 @@
           <p><a href="" class="hover:text-gray-200"><i class="fa-solid fa-cart-shopping"></i></a></p>
         </div>
         <!-- Logo #2 (Este es para el responsive) -->
-        <div class="nav-logo-pag py-2 flex sm:hidden gap-3 justify-between">
+        <div class="nav-logo-pag py-2 flex sm:hidden gap-3 justify-between mt-2">
           <a href="{{route('index')}}" class="text-white hover:text-gray-400">
             <p>Logo</p>
           </a>
