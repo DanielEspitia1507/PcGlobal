@@ -26,7 +26,7 @@
         <link rel="stylesheet" href="{{asset('fontawesome-free-6.4.0-web/css/all.min.css')}}">
         
         <!-- Titulo Principal Pagina web (Nombre empresa + Titulo Personalizado)-->
-        <title>PcGlobal | @yield('title','Home')</title>
+        <title>@yield('title','Home')  - PcGlobal</title>
     </head>
     
     {{-- 
