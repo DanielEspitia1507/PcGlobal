@@ -27,7 +27,8 @@ return new class extends Migration
             $table->increments('id')->comment("Llave Primaria");
 
             /* Campos Personalizados */
-                $table->string("nombre_categoria",255)->unique()->comment("Nombre de la Categoría");
+                $table->string("nombre_categoria")->unique()->comment("Nombre de la Categoría");
+                $table->string("slug")->unique()->comment("Ruta Url");
             //
         });
     }

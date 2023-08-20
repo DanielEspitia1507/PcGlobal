@@ -18,11 +18,13 @@ class RegistrosCategorias extends Seeder
         while (($data = fgetcsv($file)) !== false) {
             // Omitir la primera columna vacía, iniciar desde la columna 1
             $nombre = trim($data[1]);
+            $slug = trim($data[2]);
 
             // Realiza una inserción en la tabla "categorias" solo si el nombre no está vacío
             if (!empty($nombre)) {
                 DB::table('categorias')->insert([
-                    'nombre_categoria' => $nombre
+                    'nombre_categoria' => $nombre,
+                    'slug' => $slug,
                 ]);
             }
         }

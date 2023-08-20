@@ -33,8 +33,8 @@ use Illuminate\Support\Facades\Route;
         //Vista: Categorías landing
         Route::get('/#categorias', 'index')->name('categorias');
 
-        // Vista: Categorias
-        Route::get('/categorias/{categoria}', 'categoria')->name('categoria');
+        // Vista: Categorias productos
+        Route::get('categorias/{categoria}', 'categorias')->name('categoria');
     });
 //
 
@@ -45,7 +45,7 @@ use Illuminate\Support\Facades\Route;
         Route::get('/register', [authController::class,'registerView'])->name('registerView');
 
         //Enviar datos del formulario de registro al controlador correspondiente
-        Route::post('/resgister', [authController::class,'clientRegister'])->name("clientRegister");
+        Route::post('/register', [authController::class,'clientRegister'])->name("clientRegister");
     });
 //
 
