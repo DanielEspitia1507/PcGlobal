@@ -40,6 +40,8 @@ return new class extends Migration
             $table->text("descripcion")->unique()->comment("Descripcion del Producto");
 
             $table->string("precio",10)->comment("Precio unitario del producto");
+
+            $table->string("slug")->unique()->comment("Ruta Url");
             //
 
             //Campos Create_at y Update_at

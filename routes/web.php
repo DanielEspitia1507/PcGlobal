@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\authController;
 use App\Http\Controllers\landingPageController;
+use App\Http\Controllers\productoController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,6 +37,16 @@ use Illuminate\Support\Facades\Route;
         // Vista: Categorias productos
         Route::get('categorias/{categoria}', 'categorias')->name('categoria');
     });
+//
+
+/*
+    Rutas del producto seleccionado
+*/
+    Route::controller(productoController::class)->group(function(){
+        Route::get('categorias/{categoria}/{producto}','show')->name('categoria.producto');
+    });
+
+
 //
 
 //Rutas de Autenticacion para usuarios que no hayan iniciado sesion (guest)

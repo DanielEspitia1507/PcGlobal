@@ -52,3 +52,8 @@ nav{
   aspect-ratio: 4/3;
   object-fit: contain;
 }
+
+.desc-producto{
+  border: 0.5px solid #9B9E9C;
+  border-radius: 8px;
+}

@@ -9,8 +9,12 @@ class productos extends Model
 {
     use HasFactory;
 
+    public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+    
     //Relación uno a muchos (inversa)
-
     public function categoria(){
         return $this->belongsTo('App\Models\Categoria', 'id_categoria');
     }

@@ -15,16 +15,17 @@
   @section('main_class','container mt-3 mb-10 text-justify mx-auto flex-grow mx-2')
   
     <h1 class="text-center font-bold text-2xl py-10">{{$categoria->nombre_categoria}}</h1>
+    <div class="sm:hidden flex justify-center"> {{ $productos->links('pagination::tailwind') }}</div>
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 productos gap-4">
-      @forelse ($productos as $item)
+      @forelse ($productos as $producto)
         <div class="my-3 border rounded shadow">
-          <h3 class="p-3 text-center mx-10 border-b border-gray-600 font-medium">{{$item->modelo}}</h3>
-          <img src="{{ asset('storage/' . $item->imagen) }}" alt="{{ $item->Nombre}}" class="my-3"> 
+          <h3 class="p-3 text-center mx-10 border-b border-gray-600 font-medium">{{$producto->modelo}}</h3>
+          <img src="{{ asset('storage/' . $producto->imagen) }}" alt="{{ $producto->Nombre}}" class="my-3"> 
           {{-- Se accede a la carpeta 'storage/' y se accede a la posicón del registro para cargar la imágen --}}
-          <p class="text-center py-2 border-t border-gray-600 mx-10">${{ number_format($item->precio, 0, '.', '.') }} COP</p>
+          <p class="text-center py-2 border-t border-gray-600 mx-10">${{ number_format($producto->precio, 0, '.', '.') }} COP</p>
           {{-- El segundo argumento de number_format especifica la cantidad de decimales (en este caso, 0), el tercer argumento es el separador decimal (en este caso, un punto) y el cuarto argumento es el separador de miles (también un punto). --}}
           <p class="flex">
-            <a href="{{$item->id}}" class="bg-indigo-600 hover:bg-indigo-700 text-center mx-auto mb-3 rounded text-white py-2 px-8">Detalles</a>
+            <a href="{{route('categoria.producto',[$categoria->slug,$producto->slug])}}" class="bg-indigo-600 hover:bg-indigo-700 text-center mx-auto mb-3 rounded text-white py-2 px-8">Detalles</a>
           </p>
         </div>
       @empty
@@ -35,4 +36,5 @@
         </div>
       @endforelse
     </div>
+    <div class="hidden sm:flex sm:justify-center">{{ $productos->links('pagination::tailwind') }}</div>
 @endsection

@@ -18,7 +18,7 @@ class landingPageController extends Controller
     }   
 
     public function categorias(Categoria $categoria){
-        $productos = $categoria->productos;
-        return view('categorias.categoria', compact('categoria', 'productos'));
+        $productos = $categoria->productos()->paginate(9);
+        return view('productos.categoria', compact('categoria', 'productos'));
     }
 }

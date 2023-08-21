@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Str;
 
 class Productos extends Seeder
 {
@@ -33,6 +34,7 @@ class Productos extends Seeder
                     'imagen' => $imagen,
                     'descripcion' => $desc,
                     'precio' => $precio,
+                    'slug' => Str::slug($modelo, '-'),
                 ]);
             }
         }
