@@ -21,16 +21,20 @@
       <div class="flex flex-col text-center font-medium col-span-2">
           <img class="w-full sm:w-2/4 md:w-3/4 my-2 mx-auto sm:mx-20" src="{{asset('storage/' . $producto->imagen)}}" alt="">
       </div>
-    <div class="flex flex-col p-2 sm:p-3 desc-producto gap-y-2 text-start">
+      <aside class="flex flex-col p-2 sm:p-3 desc-producto gap-y-2 text-start">
         <p class="text-gray-400 text-xs">Descripción del producto</p>
         <ul class="flex flex-col gap-y-2 sm:gap-y-4">
             <li class="text-xl sm:text-2xl"><p class="font-bold">{{$producto->modelo}}</p></li>
             <li class="text-lg sm:text-xl">$ {{number_format($producto->precio, 0, '.', '.')}}</li>
         </ul>
-      <div class="especifiaciones prose my-5">
-        {!! Parsedown::instance()->text(file_get_contents(asset('storage/' . $producto->descripcion))) !!}
-      </div>
-    </div>
+        @if (file_exists(public_path('storage/' . $producto->descripcion)))
+        <div class="especifiaciones prose prose-gray my-2">
+            {!! Parsedown::instance()->text(file_get_contents(asset('storage/' . $producto->descripcion))) !!}
+        </div>            
+        @else
+          <div>{{$producto->descripcion}}</div>
+        @endif
+      </aside>
   </div>
 
 @endsection
