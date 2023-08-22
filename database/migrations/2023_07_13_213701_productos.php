@@ -37,7 +37,9 @@ return new class extends Migration
 
             $table->text("imagen")->comment("Imágen del Producto");
 
-            $table->text("descripcion")->unique()->comment("Descripcion del Producto");
+            $table->text("descripcion_1")->unique()->comment("Descripcion Número 1 del Producto");
+
+            $table->text("descripcion_2")->unique()->nullable()->comment("Descripcion Número 2 del Producto");
 
             $table->string("precio",10)->comment("Precio unitario del producto");
 

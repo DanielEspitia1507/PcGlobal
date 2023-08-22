@@ -32,7 +32,7 @@ class Productos extends Seeder
                     'id_categoria' => $categoria,
                     'modelo' => $modelo,
                     'imagen' => $imagen,
-                    'descripcion' => $desc,
+                    'descripcion_1' => $desc,
                     'precio' => $precio,
                     'slug' => Str::slug($modelo, '-'),
                 ]);
