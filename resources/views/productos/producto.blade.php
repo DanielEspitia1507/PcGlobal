@@ -19,32 +19,23 @@
   </div>
   <div class="contenedor grid grid-cols-1 md:grid-cols-3 my-6 gap-4 py-3 bg-white px-3 mx-8 rounded-lg"> 
       <div class="flex flex-col text-center font-medium col-span-2">
-          <img class="w-full sm:w-2/4 md:w-3/4 mx-auto sm:mx-20" src="{{asset('storage/' . $producto->imagen)}}" alt="">
-          {{-- La segunda descripción es opcional, la primera no --}}
-          @if ($producto->descripcion_2)
-            @if (file_exists(public_path('storage/' . $producto->descripcion_2)))
-            <div class="prose prose-lg mx-auto hidden sm:flex sm:flex-col gap-4 hover:prose-h4:underline">
-              {!! Parsedown::instance()->text(file_get_contents(asset('storage/' . $producto->descripcion_2))) !!}
-            </div>
-            @else
-            <div class="hidden sm:flex mx-auto">{{$producto->descripcion_2}}</div>
-            @endif
-          @endif
+        <img class="w-full sm:w-2/4 md:w-3/4 mx-auto sm:mx-10 lg:mx-20 my-auto lg:my-0" src="{{asset('storage/' . $producto->imagen)}}" alt="">
       </div>
-      <aside class="flex flex-col p-2 sm:p-3 desc-producto gap-y-2 text-start">
+      <aside class="flex flex-col p-2 sm:p-3 desc-producto gap-y-2 text-start ms-3 sm:ms-0 ">
         <p class="text-gray-400 text-xs">Descripción del producto</p>
         <ul class="flex flex-col gap-y-2 sm:gap-y-4">
-            <li class="text-xl sm:text-2xl hover:underline"><p class="font-bold">{{$producto->modelo}}</p></li>
-            <li class="text-lg sm:text-xl">$ {{number_format($producto->precio, 0, '.', '.')}}</li>
+            <li class="text-xl lg:text-2xl hover:underline"><p class="font-bold">{{$producto->modelo}}</p></li>
+            <li class="text-lg lg:text-xl">$ {{number_format($producto->precio, 0, '.', '.')}}</li>
         </ul>
-        @if (file_exists(public_path('storage/' . $producto->descripcion_1)))
-        <div class="especificaciones prose prose-sm my-2 hover:prose-h3:underline">
-            {!! Parsedown::instance()->text(file_get_contents(asset('storage/' . $producto->descripcion_1))) !!}
+        {{-- Descripción #1 --}}
+        <div class="especificaciones prose prose-sm lg:prose-base my-2 hover:prose-h3:underline">
+          {!! $descripciones['descripcion_1'] !!}
         </div>            
-        @else
-          <div>{{$producto->descripcion_1}}</div>
-        @endif
       </aside>
+      {{-- Descripción #2 --}}
+      <div class="col-span-2 text-center prose md:prose-md lg:prose-lg mx-auto hidden sm:flex flex-col gap-4 hover:prose-h4:underline">
+        {!! $descripciones['descripcion_2'] !!}
+      </div>
   </div>
 
 @endsection

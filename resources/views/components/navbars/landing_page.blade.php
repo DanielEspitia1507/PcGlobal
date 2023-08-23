@@ -19,12 +19,12 @@
       </div>
       <div class="nav-right flex gap-12">
         <!-- Enlaces de productos -->
-        <div class="nav-productos justify-evenly hidden sm:flex gap-4 ps-3">
+        <div class="nav-productos justify-evenly hidden lg:flex gap-4 ps-3">
           <p><a class="hover:text-gray-200" href="{{route('categorias')}}">Categorías</a></p>
           <p><a class="hover:text-gray-200" href="#">PQRS</a></p>
         </div>
         <!-- Enlaces de login y carrito -->
-        <div class="nav-login hidden sm:flex gap-4">
+        <div class="nav-login hidden lg:flex gap-4">
           <a href="{{route("login")}}" class="hover:text-gray-200">
             <i class="fa-regular fa-user"></i>
           </a>
@@ -32,12 +32,12 @@
           <p><a href="" class="hover:text-gray-200"><i class="fa-solid fa-cart-shopping"></i></a></p>
         </div>
         <!-- Logo #2 (Este es para el responsive) -->
-        <div class="nav-logo-pag py-2 flex sm:hidden gap-3 justify-between mt-2">
-          <a href="{{route('index')}}" class="text-white hover:text-gray-400">
+        <div class="nav-logo-pag py-2 flex lg:hidden gap-3 justify-between mt-2">
+          <a href="{{route('index')}}" class="text-white flex sm:hidden hover:text-gray-400">
             <p>Logo</p>
           </a>
           {{-- Ícono del menú --}}
-          <p><i class="fa-solid fa-bars"></i></p>
+          <p><i class="fa-solid fa-bars text-md md:text-lg"></i></p>
         </div>
       </div>
     </div>
