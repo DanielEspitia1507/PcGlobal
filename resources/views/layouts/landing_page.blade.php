@@ -51,7 +51,7 @@
         {{-- Importancion Pie de Pagina --}}
         @include('components.footer')
         
+        {{-- Importación manual de archivos JavaScript --}}
+        <script src="{{ asset('js/app.js') }}"></script>
     </body>
-    {{-- Importación manual de archivos JavaScript --}}
-    <script src="{{ asset('js/app.js') }}"></script>
 </html>

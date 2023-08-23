@@ -22,8 +22,9 @@ class Productos extends Seeder
             $categoria = trim($data[2]);
             $modelo = trim($data[3]);
             $imagen = trim($data[4]);
-            $desc = trim($data[5]);
-            $precio = trim($data[6]);
+            $desc_1 = trim($data[5]);
+            $desc_2 = trim($data[6]);
+            $precio = trim($data[7]);
 
             // Realiza una inserción en la tabla "productos" solo si la marca no está vacía
             if (!empty($marca)) {
@@ -32,7 +33,8 @@ class Productos extends Seeder
                     'id_categoria' => $categoria,
                     'modelo' => $modelo,
                     'imagen' => $imagen,
-                    'descripcion_1' => $desc,
+                    'descripcion_1' => $desc_1,
+                    'descripcion_2' => $desc_2,
                     'precio' => $precio,
                     'slug' => Str::slug($modelo, '-'),
                 ]);
